@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rejector_id: 1
+  rejected_id: 1
+
+two:
+  rejector_id: 1
+  rejected_id: 1

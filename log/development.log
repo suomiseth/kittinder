@@ -1,0 +1,684 @@
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateOwners (20150711234037)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "owners" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "state" varchar, "city" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234037"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateCats (20150711234430)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "photo_url" varchar, "color" varchar, "blub" text, "owner_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234430"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateLikes (20150711234806)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "liker_id" integer, "liked_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234806"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateMatches (20150711234856)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_match_id" integer, "second_match_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234856"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateRejections (20150711234948)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "rejections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rejector_id" integer, "rejected_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234948"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateOwners (20150711234037)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "owners" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "state" varchar, "city" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234037"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateCats (20150711234430)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "photo_url" varchar, "color" varchar, "blurb" text, "owner_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234430"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateLikes (20150711234806)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "liker_id" integer, "liked_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234806"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateMatches (20150711234856)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_match_id" integer, "second_match_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234856"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateRejections (20150711234948)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "rejections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rejector_id" integer, "rejected_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234948"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 0"], ["state", "state 0"], ["city", "city 0"], ["created_at", "2015-07-12 00:17:54.530480"], ["updated_at", "2015-07-12 00:17:54.530480"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:17:54.539062"], ["updated_at", "2015-07-12 00:17:54.539062"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 2"], ["state", "state 2"], ["city", "city 2"], ["created_at", "2015-07-12 00:17:54.541274"], ["updated_at", "2015-07-12 00:17:54.541274"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 3"], ["state", "state 3"], ["city", "city 3"], ["created_at", "2015-07-12 00:17:54.543308"], ["updated_at", "2015-07-12 00:17:54.543308"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 4"], ["state", "state 4"], ["city", "city 4"], ["created_at", "2015-07-12 00:17:54.545683"], ["updated_at", "2015-07-12 00:17:54.545683"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 0"], ["photo_url", "photo url 0"], ["color", "color 0"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 0], ["created_at", "2015-07-12 00:17:54.561312"], ["updated_at", "2015-07-12 00:17:54.561312"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 1"], ["photo_url", "photo url 1"], ["color", "color 1"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 0], ["created_at", "2015-07-12 00:17:54.564345"], ["updated_at", "2015-07-12 00:17:54.564345"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 2"], ["photo_url", "photo url 2"], ["color", "color 2"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:17:54.566516"], ["updated_at", "2015-07-12 00:17:54.566516"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 3"], ["photo_url", "photo url 3"], ["color", "color 3"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:17:54.569133"], ["updated_at", "2015-07-12 00:17:54.569133"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 4"], ["photo_url", "photo url 4"], ["color", "color 4"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:17:54.571858"], ["updated_at", "2015-07-12 00:17:54.571858"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 5"], ["photo_url", "photo url 5"], ["color", "color 5"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:17:54.573969"], ["updated_at", "2015-07-12 00:17:54.573969"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 6"], ["photo_url", "photo url 6"], ["color", "color 6"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:17:54.576164"], ["updated_at", "2015-07-12 00:17:54.576164"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 7"], ["photo_url", "photo url 7"], ["color", "color 7"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:17:54.578337"], ["updated_at", "2015-07-12 00:17:54.578337"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 8"], ["photo_url", "photo url 8"], ["color", "color 8"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:17:54.580474"], ["updated_at", "2015-07-12 00:17:54.580474"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 9"], ["photo_url", "photo url 9"], ["color", "color 9"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:17:54.582593"], ["updated_at", "2015-07-12 00:17:54.582593"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mCat Load (1.9ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  [1m[35mOwner Load (0.2ms)[0m  SELECT "owners".* FROM "owners"
+  [1m[36mOwner Load (0.3ms)[0m  [1mSELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" ASC LIMIT 1[0m
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" ASC LIMIT 1
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "cats"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 0"], ["state", "state 0"], ["city", "city 0"], ["created_at", "2015-07-12 00:25:12.431797"], ["updated_at", "2015-07-12 00:25:12.431797"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:25:12.437335"], ["updated_at", "2015-07-12 00:25:12.437335"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 2"], ["state", "state 2"], ["city", "city 2"], ["created_at", "2015-07-12 00:25:12.439452"], ["updated_at", "2015-07-12 00:25:12.439452"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 3"], ["state", "state 3"], ["city", "city 3"], ["created_at", "2015-07-12 00:25:12.441393"], ["updated_at", "2015-07-12 00:25:12.441393"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 4"], ["state", "state 4"], ["city", "city 4"], ["created_at", "2015-07-12 00:25:12.443351"], ["updated_at", "2015-07-12 00:25:12.443351"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 0"], ["photo_url", "photo url 0"], ["color", "color 0"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 0], ["created_at", "2015-07-12 00:25:12.458487"], ["updated_at", "2015-07-12 00:25:12.458487"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 1"], ["photo_url", "photo url 1"], ["color", "color 1"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 0], ["created_at", "2015-07-12 00:25:12.461186"], ["updated_at", "2015-07-12 00:25:12.461186"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 2"], ["photo_url", "photo url 2"], ["color", "color 2"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:25:12.463360"], ["updated_at", "2015-07-12 00:25:12.463360"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 3"], ["photo_url", "photo url 3"], ["color", "color 3"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:25:12.465619"], ["updated_at", "2015-07-12 00:25:12.465619"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 4"], ["photo_url", "photo url 4"], ["color", "color 4"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:25:12.467858"], ["updated_at", "2015-07-12 00:25:12.467858"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 5"], ["photo_url", "photo url 5"], ["color", "color 5"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:25:12.470208"], ["updated_at", "2015-07-12 00:25:12.470208"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 6"], ["photo_url", "photo url 6"], ["color", "color 6"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:25:12.472719"], ["updated_at", "2015-07-12 00:25:12.472719"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 7"], ["photo_url", "photo url 7"], ["color", "color 7"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:25:12.475072"], ["updated_at", "2015-07-12 00:25:12.475072"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 8"], ["photo_url", "photo url 8"], ["color", "color 8"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:25:12.477294"], ["updated_at", "2015-07-12 00:25:12.477294"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 9"], ["photo_url", "photo url 9"], ["color", "color 9"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:25:12.479491"], ["updated_at", "2015-07-12 00:25:12.479491"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 1], ["liked_id", 10], ["created_at", "2015-07-12 00:25:12.487012"], ["updated_at", "2015-07-12 00:25:12.487012"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 2], ["liked_id", 9], ["created_at", "2015-07-12 00:25:12.489900"], ["updated_at", "2015-07-12 00:25:12.489900"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_match_id", 3], ["second_match_id", 8], ["created_at", "2015-07-12 00:25:12.497298"], ["updated_at", "2015-07-12 00:25:12.497298"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_match_id", 4], ["second_match_id", 7], ["created_at", "2015-07-12 00:25:12.499734"], ["updated_at", "2015-07-12 00:25:12.499734"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rejections" ("rejector_id", "rejected_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["rejector_id", 5], ["rejected_id", 6], ["created_at", "2015-07-12 00:25:12.506613"], ["updated_at", "2015-07-12 00:25:12.506613"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36mLike Load (1.3ms)[0m  [1mSELECT "likes".* FROM "likes"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "likes"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "owners"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 0"], ["state", "state 0"], ["city", "city 0"], ["created_at", "2015-07-12 00:27:25.460028"], ["updated_at", "2015-07-12 00:27:25.460028"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:27:25.464859"], ["updated_at", "2015-07-12 00:27:25.464859"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 2"], ["state", "state 2"], ["city", "city 2"], ["created_at", "2015-07-12 00:27:25.467024"], ["updated_at", "2015-07-12 00:27:25.467024"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 3"], ["state", "state 3"], ["city", "city 3"], ["created_at", "2015-07-12 00:27:25.469023"], ["updated_at", "2015-07-12 00:27:25.469023"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 4"], ["state", "state 4"], ["city", "city 4"], ["created_at", "2015-07-12 00:27:25.471052"], ["updated_at", "2015-07-12 00:27:25.471052"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 0"], ["photo_url", "photo url 0"], ["color", "color 0"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 0], ["created_at", "2015-07-12 00:27:25.487853"], ["updated_at", "2015-07-12 00:27:25.487853"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 1"], ["photo_url", "photo url 1"], ["color", "color 1"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 0], ["created_at", "2015-07-12 00:27:25.491303"], ["updated_at", "2015-07-12 00:27:25.491303"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 2"], ["photo_url", "photo url 2"], ["color", "color 2"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:27:25.494145"], ["updated_at", "2015-07-12 00:27:25.494145"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 3"], ["photo_url", "photo url 3"], ["color", "color 3"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:27:25.496885"], ["updated_at", "2015-07-12 00:27:25.496885"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 4"], ["photo_url", "photo url 4"], ["color", "color 4"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:27:25.499891"], ["updated_at", "2015-07-12 00:27:25.499891"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 5"], ["photo_url", "photo url 5"], ["color", "color 5"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:27:25.502411"], ["updated_at", "2015-07-12 00:27:25.502411"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 6"], ["photo_url", "photo url 6"], ["color", "color 6"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:27:25.504759"], ["updated_at", "2015-07-12 00:27:25.504759"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 7"], ["photo_url", "photo url 7"], ["color", "color 7"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:27:25.506998"], ["updated_at", "2015-07-12 00:27:25.506998"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 8"], ["photo_url", "photo url 8"], ["color", "color 8"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:27:25.509276"], ["updated_at", "2015-07-12 00:27:25.509276"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 9"], ["photo_url", "photo url 9"], ["color", "color 9"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:27:25.511546"], ["updated_at", "2015-07-12 00:27:25.511546"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 1], ["liked_id", 10], ["created_at", "2015-07-12 00:27:25.518607"], ["updated_at", "2015-07-12 00:27:25.518607"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 2], ["liked_id", 9], ["created_at", "2015-07-12 00:27:25.520797"], ["updated_at", "2015-07-12 00:27:25.520797"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 8], ["liked_id", 9], ["created_at", "2015-07-12 00:27:25.522715"], ["updated_at", "2015-07-12 00:27:25.522715"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 8], ["liked_id", 4], ["created_at", "2015-07-12 00:27:25.524735"], ["updated_at", "2015-07-12 00:27:25.524735"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_match_id", 3], ["second_match_id", 8], ["created_at", "2015-07-12 00:27:25.531665"], ["updated_at", "2015-07-12 00:27:25.531665"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_match_id", 4], ["second_match_id", 7], ["created_at", "2015-07-12 00:27:25.533755"], ["updated_at", "2015-07-12 00:27:25.533755"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "rejections" ("rejector_id", "rejected_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["rejector_id", 5], ["rejected_id", 6], ["created_at", "2015-07-12 00:27:25.540497"], ["updated_at", "2015-07-12 00:27:25.540497"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateOwners (20150711234037)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "owners" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "state" varchar, "city" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234037"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateCats (20150711234430)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "photo_url" varchar, "color" varchar, "blurb" text, "owner_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234430"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateLikes (20150711234806)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "liker_id" integer, "liked_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234806"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateMatches (20150711234856)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_match_id" integer, "second_match_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234856"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateRejections (20150711234948)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "rejections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rejector_id" integer, "rejected_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234948"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:28:57.452936"], ["updated_at", "2015-07-12 00:28:57.452936"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 2"], ["state", "state 2"], ["city", "city 2"], ["created_at", "2015-07-12 00:28:57.458548"], ["updated_at", "2015-07-12 00:28:57.458548"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 3"], ["state", "state 3"], ["city", "city 3"], ["created_at", "2015-07-12 00:28:57.460819"], ["updated_at", "2015-07-12 00:28:57.460819"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 4"], ["state", "state 4"], ["city", "city 4"], ["created_at", "2015-07-12 00:28:57.462693"], ["updated_at", "2015-07-12 00:28:57.462693"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 5"], ["state", "state 5"], ["city", "city 5"], ["created_at", "2015-07-12 00:28:57.464573"], ["updated_at", "2015-07-12 00:28:57.464573"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 1"], ["photo_url", "photo url 1"], ["color", "color 1"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 0], ["created_at", "2015-07-12 00:28:57.479270"], ["updated_at", "2015-07-12 00:28:57.479270"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 2"], ["photo_url", "photo url 2"], ["color", "color 2"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:28:57.482277"], ["updated_at", "2015-07-12 00:28:57.482277"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 3"], ["photo_url", "photo url 3"], ["color", "color 3"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:28:57.484486"], ["updated_at", "2015-07-12 00:28:57.484486"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 4"], ["photo_url", "photo url 4"], ["color", "color 4"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:28:57.486692"], ["updated_at", "2015-07-12 00:28:57.486692"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 5"], ["photo_url", "photo url 5"], ["color", "color 5"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:28:57.488895"], ["updated_at", "2015-07-12 00:28:57.488895"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 6"], ["photo_url", "photo url 6"], ["color", "color 6"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:28:57.491155"], ["updated_at", "2015-07-12 00:28:57.491155"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 7"], ["photo_url", "photo url 7"], ["color", "color 7"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:28:57.493592"], ["updated_at", "2015-07-12 00:28:57.493592"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 8"], ["photo_url", "photo url 8"], ["color", "color 8"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:28:57.495789"], ["updated_at", "2015-07-12 00:28:57.495789"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 9"], ["photo_url", "photo url 9"], ["color", "color 9"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:28:57.498064"], ["updated_at", "2015-07-12 00:28:57.498064"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 10"], ["photo_url", "photo url 10"], ["color", "color 10"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 5], ["created_at", "2015-07-12 00:28:57.500649"], ["updated_at", "2015-07-12 00:28:57.500649"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 1], ["liked_id", 10], ["created_at", "2015-07-12 00:28:57.507776"], ["updated_at", "2015-07-12 00:28:57.507776"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 2], ["liked_id", 9], ["created_at", "2015-07-12 00:28:57.509920"], ["updated_at", "2015-07-12 00:28:57.509920"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 8], ["liked_id", 9], ["created_at", "2015-07-12 00:28:57.511935"], ["updated_at", "2015-07-12 00:28:57.511935"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 8], ["liked_id", 4], ["created_at", "2015-07-12 00:28:57.513860"], ["updated_at", "2015-07-12 00:28:57.513860"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_match_id", 3], ["second_match_id", 8], ["created_at", "2015-07-12 00:28:57.520655"], ["updated_at", "2015-07-12 00:28:57.520655"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_match_id", 4], ["second_match_id", 7], ["created_at", "2015-07-12 00:28:57.523242"], ["updated_at", "2015-07-12 00:28:57.523242"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "rejections" ("rejector_id", "rejected_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["rejector_id", 5], ["rejected_id", 6], ["created_at", "2015-07-12 00:28:57.530083"], ["updated_at", "2015-07-12 00:28:57.530083"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "owners"[0m
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" ASC LIMIT 1
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1 OFFSET 2[0m
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" ASC LIMIT 1
+  [1m[36mOwner Load (0.2ms)[0m  [1mSELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" ASC LIMIT 1[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?  [["owner_id", 1]]
+  [1m[36mOwner Load (0.2ms)[0m  [1mSELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "cats" WHERE "cats"."owner_id" = ?  [["owner_id", 1]]
+  [1m[36mOwner Load (0.2ms)[0m  [1mSELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" DESC LIMIT 1[0m
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" DESC LIMIT 1
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 5]]
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 5]]
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1[0m
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 0]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1[0m
+  [1m[35mLike Load (0.2ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = ?  [["liker_id", 1]]
+  [1m[36mLike Load (0.2ms)[0m  [1mSELECT "likes".* FROM "likes" WHERE "likes"."liked_id" = ?[0m  [["liked_id", 1]]
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:34:21.005930"], ["updated_at", "2015-07-12 00:34:21.005930"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 2"], ["state", "state 2"], ["city", "city 2"], ["created_at", "2015-07-12 00:34:21.013675"], ["updated_at", "2015-07-12 00:34:21.013675"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 3"], ["state", "state 3"], ["city", "city 3"], ["created_at", "2015-07-12 00:34:21.016650"], ["updated_at", "2015-07-12 00:34:21.016650"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 4"], ["state", "state 4"], ["city", "city 4"], ["created_at", "2015-07-12 00:34:21.019186"], ["updated_at", "2015-07-12 00:34:21.019186"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 5"], ["state", "state 5"], ["city", "city 5"], ["created_at", "2015-07-12 00:34:21.022145"], ["updated_at", "2015-07-12 00:34:21.022145"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 1"], ["photo_url", "photo url 1"], ["color", "color 1"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 0], ["created_at", "2015-07-12 00:34:21.038807"], ["updated_at", "2015-07-12 00:34:21.038807"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 2"], ["photo_url", "photo url 2"], ["color", "color 2"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:34:21.041663"], ["updated_at", "2015-07-12 00:34:21.041663"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 3"], ["photo_url", "photo url 3"], ["color", "color 3"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:34:21.043993"], ["updated_at", "2015-07-12 00:34:21.043993"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 4"], ["photo_url", "photo url 4"], ["color", "color 4"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:34:21.046353"], ["updated_at", "2015-07-12 00:34:21.046353"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 5"], ["photo_url", "photo url 5"], ["color", "color 5"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:34:21.048688"], ["updated_at", "2015-07-12 00:34:21.048688"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 6"], ["photo_url", "photo url 6"], ["color", "color 6"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:34:21.050954"], ["updated_at", "2015-07-12 00:34:21.050954"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 7"], ["photo_url", "photo url 7"], ["color", "color 7"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:34:21.053481"], ["updated_at", "2015-07-12 00:34:21.053481"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 8"], ["photo_url", "photo url 8"], ["color", "color 8"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:34:21.055774"], ["updated_at", "2015-07-12 00:34:21.055774"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 9"], ["photo_url", "photo url 9"], ["color", "color 9"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:34:21.058053"], ["updated_at", "2015-07-12 00:34:21.058053"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 10"], ["photo_url", "photo url 10"], ["color", "color 10"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 5], ["created_at", "2015-07-12 00:34:21.060292"], ["updated_at", "2015-07-12 00:34:21.060292"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 1], ["liked_id", 10], ["created_at", "2015-07-12 00:34:21.067618"], ["updated_at", "2015-07-12 00:34:21.067618"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 2], ["liked_id", 9], ["created_at", "2015-07-12 00:34:21.069829"], ["updated_at", "2015-07-12 00:34:21.069829"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 8], ["liked_id", 9], ["created_at", "2015-07-12 00:34:21.071969"], ["updated_at", "2015-07-12 00:34:21.071969"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 8], ["liked_id", 4], ["created_at", "2015-07-12 00:34:21.074211"], ["updated_at", "2015-07-12 00:34:21.074211"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 6], ["liked_id", 8], ["created_at", "2015-07-12 00:34:21.076268"], ["updated_at", "2015-07-12 00:34:21.076268"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_match_id", 3], ["second_match_id", 8], ["created_at", "2015-07-12 00:34:21.083584"], ["updated_at", "2015-07-12 00:34:21.083584"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_match_id", 4], ["second_match_id", 7], ["created_at", "2015-07-12 00:34:21.086277"], ["updated_at", "2015-07-12 00:34:21.086277"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "rejections" ("rejector_id", "rejected_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["rejector_id", 5], ["rejected_id", 6], ["created_at", "2015-07-12 00:34:21.093690"], ["updated_at", "2015-07-12 00:34:21.093690"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mLike Load (0.2ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."liker_id" = ?  [["liker_id", 8]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes" WHERE "likes"."liked_id" = ?[0m  [["liked_id", 8]]
+  [1m[35mLike Load (0.2ms)[0m  SELECT "likes".* FROM "likes" WHERE "likes"."liked_id" = ?  [["liked_id", 8]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1 OFFSET 4[0m
+  [1m[35mRejection Load (0.2ms)[0m  SELECT "rejections".* FROM "rejections" WHERE "rejections"."rejector_id" = ?  [["rejector_id", 5]]
+  [1m[36mOwner Load (0.2ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mOwner Load (0.2ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateOwners (20150711234037)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "owners" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "state" varchar, "city" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234037"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateCats (20150711234430)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "photo_url" varchar, "color" varchar, "blurb" text, "owner_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234430"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateLikes (20150711234806)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "liker_id" integer, "liked_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234806"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateMatches (20150711234856)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_match_id" integer, "second_match_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234856"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateRejections (20150711234948)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "rejections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rejector_id" integer, "rejected_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234948"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:47:28.137034"], ["updated_at", "2015-07-12 00:47:28.137034"]]
+  [1m[35m (3.6ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:48:51.414160"], ["updated_at", "2015-07-12 00:48:51.414160"]]
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:48:56.689222"], ["updated_at", "2015-07-12 00:48:56.689222"]]
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:49:49.701245"], ["updated_at", "2015-07-12 00:49:49.701245"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 2"], ["state", "state 2"], ["city", "city 2"], ["created_at", "2015-07-12 00:49:49.705558"], ["updated_at", "2015-07-12 00:49:49.705558"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 3"], ["state", "state 3"], ["city", "city 3"], ["created_at", "2015-07-12 00:49:49.707687"], ["updated_at", "2015-07-12 00:49:49.707687"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 4"], ["state", "state 4"], ["city", "city 4"], ["created_at", "2015-07-12 00:49:49.709676"], ["updated_at", "2015-07-12 00:49:49.709676"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 5"], ["state", "state 5"], ["city", "city 5"], ["created_at", "2015-07-12 00:49:49.711706"], ["updated_at", "2015-07-12 00:49:49.711706"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 1"], ["photo_url", "photo url 1"], ["color", "color 1"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 0], ["created_at", "2015-07-12 00:49:49.725846"], ["updated_at", "2015-07-12 00:49:49.725846"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 2"], ["photo_url", "photo url 2"], ["color", "color 2"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:49:49.728777"], ["updated_at", "2015-07-12 00:49:49.728777"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 3"], ["photo_url", "photo url 3"], ["color", "color 3"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 00:49:49.731011"], ["updated_at", "2015-07-12 00:49:49.731011"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 4"], ["photo_url", "photo url 4"], ["color", "color 4"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:49:49.733217"], ["updated_at", "2015-07-12 00:49:49.733217"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 5"], ["photo_url", "photo url 5"], ["color", "color 5"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 00:49:49.735375"], ["updated_at", "2015-07-12 00:49:49.735375"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 6"], ["photo_url", "photo url 6"], ["color", "color 6"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:49:49.737617"], ["updated_at", "2015-07-12 00:49:49.737617"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 7"], ["photo_url", "photo url 7"], ["color", "color 7"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 00:49:49.739937"], ["updated_at", "2015-07-12 00:49:49.739937"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 8"], ["photo_url", "photo url 8"], ["color", "color 8"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:49:49.742127"], ["updated_at", "2015-07-12 00:49:49.742127"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 9"], ["photo_url", "photo url 9"], ["color", "color 9"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 00:49:49.744372"], ["updated_at", "2015-07-12 00:49:49.744372"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 10"], ["photo_url", "photo url 10"], ["color", "color 10"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 5], ["created_at", "2015-07-12 00:49:49.746498"], ["updated_at", "2015-07-12 00:49:49.746498"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 1], ["liked_id", 10], ["created_at", "2015-07-12 00:49:49.753945"], ["updated_at", "2015-07-12 00:49:49.753945"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 2], ["liked_id", 9], ["created_at", "2015-07-12 00:49:49.757240"], ["updated_at", "2015-07-12 00:49:49.757240"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 8], ["liked_id", 9], ["created_at", "2015-07-12 00:49:49.759212"], ["updated_at", "2015-07-12 00:49:49.759212"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 8], ["liked_id", 4], ["created_at", "2015-07-12 00:49:49.761123"], ["updated_at", "2015-07-12 00:49:49.761123"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 6], ["liked_id", 8], ["created_at", "2015-07-12 00:49:49.763104"], ["updated_at", "2015-07-12 00:49:49.763104"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_match_id", 3], ["second_match_id", 8], ["created_at", "2015-07-12 00:49:49.770449"], ["updated_at", "2015-07-12 00:49:49.770449"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_match_id", 4], ["second_match_id", 7], ["created_at", "2015-07-12 00:49:49.772728"], ["updated_at", "2015-07-12 00:49:49.772728"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rejections" ("rejector_id", "rejected_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["rejector_id", 5], ["rejected_id", 6], ["created_at", "2015-07-12 00:49:49.779461"], ["updated_at", "2015-07-12 00:49:49.779461"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mOwner Load (0.1ms)[0m  [1mSELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" ASC LIMIT 1[0m
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners"  ORDER BY "owners"."id" ASC LIMIT 1
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateOwners (20150711234037)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "owners" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "state" varchar, "city" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234037"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to CreateCats (20150711234430)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "photo_url" varchar, "color" varchar, "blurb" text, "owner_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234430"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Migrating to CreateLikes (20150711234806)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "likes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "liker_id" integer, "liked_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234806"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Migrating to CreateMatches (20150711234856)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_match_id" integer, "second_match_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234856"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateRejections (20150711234948)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "rejections" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "rejector_id" integer, "rejected_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150711234948"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:52:26.024381"], ["updated_at", "2015-07-12 00:52:26.024381"]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:57:50.871212"], ["updated_at", "2015-07-12 00:57:50.871212"]]
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 00:58:46.601439"], ["updated_at", "2015-07-12 00:58:46.601439"]]
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 1"], ["state", "state 1"], ["city", "city 1"], ["created_at", "2015-07-12 01:00:33.082739"], ["updated_at", "2015-07-12 01:00:33.082739"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 2"], ["state", "state 2"], ["city", "city 2"], ["created_at", "2015-07-12 01:00:33.089663"], ["updated_at", "2015-07-12 01:00:33.089663"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 3"], ["state", "state 3"], ["city", "city 3"], ["created_at", "2015-07-12 01:00:33.091735"], ["updated_at", "2015-07-12 01:00:33.091735"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "name 4"], ["state", "state 4"], ["city", "city 4"], ["created_at", "2015-07-12 01:00:33.093630"], ["updated_at", "2015-07-12 01:00:33.093630"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "name 5"], ["state", "state 5"], ["city", "city 5"], ["created_at", "2015-07-12 01:00:33.095536"], ["updated_at", "2015-07-12 01:00:33.095536"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 1"], ["photo_url", "photo url 1"], ["color", "color 1"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 0], ["created_at", "2015-07-12 01:00:33.111396"], ["updated_at", "2015-07-12 01:00:33.111396"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 2"], ["photo_url", "photo url 2"], ["color", "color 2"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 01:00:33.114900"], ["updated_at", "2015-07-12 01:00:33.114900"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 3"], ["photo_url", "photo url 3"], ["color", "color 3"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 1], ["created_at", "2015-07-12 01:00:33.117163"], ["updated_at", "2015-07-12 01:00:33.117163"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 4"], ["photo_url", "photo url 4"], ["color", "color 4"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 01:00:33.119274"], ["updated_at", "2015-07-12 01:00:33.119274"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 5"], ["photo_url", "photo url 5"], ["color", "color 5"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 2], ["created_at", "2015-07-12 01:00:33.121418"], ["updated_at", "2015-07-12 01:00:33.121418"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 6"], ["photo_url", "photo url 6"], ["color", "color 6"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 01:00:33.123599"], ["updated_at", "2015-07-12 01:00:33.123599"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 7"], ["photo_url", "photo url 7"], ["color", "color 7"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 3], ["created_at", "2015-07-12 01:00:33.125821"], ["updated_at", "2015-07-12 01:00:33.125821"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 8"], ["photo_url", "photo url 8"], ["color", "color 8"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 01:00:33.127875"], ["updated_at", "2015-07-12 01:00:33.127875"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "cat 9"], ["photo_url", "photo url 9"], ["color", "color 9"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 4], ["created_at", "2015-07-12 01:00:33.130061"], ["updated_at", "2015-07-12 01:00:33.130061"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat 10"], ["photo_url", "photo url 10"], ["color", "color 10"], ["blurb", "Lorem ipsum dolor sit amet."], ["owner_id", 5], ["created_at", "2015-07-12 01:00:33.132163"], ["updated_at", "2015-07-12 01:00:33.132163"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 1], ["liked_id", 10], ["created_at", "2015-07-12 01:00:33.139439"], ["updated_at", "2015-07-12 01:00:33.139439"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 2], ["liked_id", 9], ["created_at", "2015-07-12 01:00:33.142313"], ["updated_at", "2015-07-12 01:00:33.142313"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 8], ["liked_id", 9], ["created_at", "2015-07-12 01:00:33.144628"], ["updated_at", "2015-07-12 01:00:33.144628"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["liker_id", 8], ["liked_id", 4], ["created_at", "2015-07-12 01:00:33.146812"], ["updated_at", "2015-07-12 01:00:33.146812"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "likes" ("liker_id", "liked_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["liker_id", 6], ["liked_id", 8], ["created_at", "2015-07-12 01:00:33.148801"], ["updated_at", "2015-07-12 01:00:33.148801"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_match_id", 3], ["second_match_id", 8], ["created_at", "2015-07-12 01:00:33.156044"], ["updated_at", "2015-07-12 01:00:33.156044"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "matches" ("first_match_id", "second_match_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_match_id", 4], ["second_match_id", 7], ["created_at", "2015-07-12 01:00:33.158342"], ["updated_at", "2015-07-12 01:00:33.158342"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "rejections" ("rejector_id", "rejected_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["rejector_id", 5], ["rejected_id", 6], ["created_at", "2015-07-12 01:00:33.165386"], ["updated_at", "2015-07-12 01:00:33.165386"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1
+  [1m[36mOwner Load (0.2ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 0]]
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1
+  [1m[36mOwner Load (0.1ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 0]]
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1 OFFSET 1
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 1]]
