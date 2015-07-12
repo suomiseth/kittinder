@@ -6,4 +6,5 @@ class Cat < ActiveRecord::Base
   has_many :second_matches, :class_name => "Match", :foreign_key => :second_match_id
   has_many :rejectors, :class_name => "Rejection", :foreign_key => :rejector_id
   has_many :rejecteds, :class_name => "Rejection", :foreign_key => :rejected_id
+
 end
