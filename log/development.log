@@ -8330,3 +8330,223 @@ Processing by CatsController#show as HTML
   [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 19]]
   Rendered cats/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-13 18:16:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.6ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 226ms (Views: 193.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-13660862b66eb0567adefcbf0f75bb1d5d8fea02b5d6fdf5e05d66a0dff6e2de.css?body=1" for ::1 at 2015-07-13 18:16:20 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-13 18:16:20 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-13 18:16:20 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-13 18:16:20 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-13 18:16:20 -0400
+
+
+Started GET "/owners" for ::1 at 2015-07-13 18:16:28 -0400
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.5ms)[0m  [1mSELECT "owners".* FROM "owners"[0m
+  Rendered owners/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/owners/1" for ::1 at 2015-07-13 18:16:30 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 1]]
+  Rendered owners/show.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 89ms (Views: 77.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-13 18:16:35 -0400
+Processing by OwnersController#index as HTML
+  [1m[35mOwner Load (0.1ms)[0m  SELECT "owners".* FROM "owners"
+  Rendered owners/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-13 18:16:37 -0400
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (3.0ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 137ms (Views: 132.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/cats/1" for ::1 at 2015-07-13 18:16:38 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCat Load (0.4ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered cats/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 126ms (Views: 121.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/owners/0" for ::1 at 2015-07-13 18:16:47 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mOwner Load (0.1ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Owner with 'id'=0):
+  app/controllers/owners_controller.rb:18:in `set_owner'
+
+
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.3ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (55.2ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.3ms)
+
+
+Started GET "/owners/0" for ::1 at 2015-07-13 18:16:47 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Owner with 'id'=0):
+  app/controllers/owners_controller.rb:18:in `set_owner'
+
+
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.2ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.8ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Minling/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (103.8ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-13 18:17:00 -0400
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/6" for ::1 at 2015-07-13 18:17:03 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered cats/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/owners/3" for ::1 at 2015-07-13 18:17:04 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOwner Load (0.2ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCat Load (0.6ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?  [["owner_id", 3]]
+  Rendered owners/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 112ms (Views: 109.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-07-13 18:17:12 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-13 18:17:16 -0400
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-13 18:17:19 -0400
+Processing by OwnersController#index as HTML
+  [1m[35mOwner Load (0.2ms)[0m  SELECT "owners".* FROM "owners"
+  Rendered owners/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-13 18:17:20 -0400
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-13 18:17:21 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 95ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-13 18:17:37 -0400
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.3ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-13 18:17:39 -0400
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.2ms)[0m  [1mSELECT "owners".* FROM "owners"[0m
+  Rendered owners/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-13 18:17:47 -0400
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-13 18:21:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OwnersController#index as HTML
+  [1m[35mOwner Load (0.5ms)[0m  SELECT "owners".* FROM "owners"
+  Rendered owners/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 275ms (Views: 244.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-13 18:21:38 -0400
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.6ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 78ms (Views: 59.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cats/3" for ::1 at 2015-07-13 18:21:40 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mOwner Load (0.6ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered cats/show.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 132ms (Views: 92.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/owners/1" for ::1 at 2015-07-13 18:21:41 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 1]]
+  Rendered owners/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 76ms (Views: 70.9ms | ActiveRecord: 0.3ms)
