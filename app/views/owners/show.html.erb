@@ -1,0 +1,25 @@
+<div>
+  <h1>Name:<%=@owner.name%></h1>
+  <ul>
+    <li>
+      State: <%= @owner.state %>
+    </li>
+
+    <li>
+      City: <%=@owner.city %>
+    </li>
+
+    <li>
+      Owned Cats: 
+      <ul>
+        <% @owner.cats.each do |cat| %>
+        <li>
+          <img src= "/images/cat.jpg" alt="Cat" height="30" width="30">
+          <a href="/cats/<%=cat.id%>"><%=cat.name%></a>
+        </li>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+</div>
+

@@ -1,28 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-  <div>
-    <h1>Name:<%=@cat.name%></h1>
-    <!-- figure out how to add real pic to database -->
-    <img src= "/images/cat.jpg" alt="Cat" height="300" width="300">
+<div>
+  <h1>Name:<%=@cat.name%></h1>
+  <!-- figure out how to add real pic to database -->
+  <img src= "/images/cat.jpg" alt="Cat" height="300" width="300">
 
-    <ul>
-      <li>
-        Color: <%= @cat.color %>
-      </li>
+  <ul>
+    <li>
+      Color: <%= @cat.color %>
+    </li>
 
-      <li>
-        Description: <%=@cat.blurb %>
-      </li>
+    <li>
+      Description: <%=@cat.blurb %>
+    </li>
 
-      <li>
-        Owner: <%=@cat.owner_id %>
-      </li>
-    </ul>
-  </div>
-</body>
-</html>
+    <li>
+      Owner: <a href="/owners/<%= @cat.owner_id %>"><%= @cat.owner_id %></a>
+      <!-- this has a problem - it breaks for cats without an owner - we should add a validation to require an owner or make this code allow for nil values -->
+    </li>
+  </ul>
+</div>
 

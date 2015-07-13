@@ -1,21 +1,10 @@
-<!DOCTYPE html>
+<h1>Cat Bachelors/Bachelorettes</h1>
 
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-
-  <h1>Cat Bachelors/Bachelorettes</h1>
-
-  <% @cats.each do |cat|%>
-    <ul>
-      <li>
-        <img src= "/images/cat.jpg" alt="Cat" height="30" width="30">
-        <a href="/cats/<%=cat.id%>"><%=cat.name%></a>
-        </li>
-    </ul>
-  <%end%>
-</body>
-
-</html>
+<% @cats.each do |cat|%>
+<ul>
+  <li>
+    <img src= "/images/cat.jpg" alt="Cat" height="30" width="30">
+    <a href="/cats/<%=cat.id%>"><%=cat.name%></a>
+  </li>
+</ul>
+<%end%>
