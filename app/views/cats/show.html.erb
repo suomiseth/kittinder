@@ -13,7 +13,7 @@
     </li>
 
     <li>
-      Owner: <a href="/owners/<%= @cat.owner_id %>"><%= @cat.owner_id %></a>
+      Owner: <a href="/owners/<%= @cat.owner_id %>"><%= @cat.owner.name %></a>
       <!-- this has a problem - it breaks for cats without an owner - we should add a validation to require an owner or make this code allow for nil values -->
     </li>
   </ul>
