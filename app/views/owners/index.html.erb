@@ -1,10 +1,12 @@
+<div class="index">
 <h1>The Owner's Den</h1>
 
 <% @owners.each do |owner|%>
-<ul>
+<ul style="list-style-type: none;">
   <li>
     <!-- we should put a url for owner's data with pictures, too -->
     <a href="/owners/<%=owner.id%>"><%=owner.name%></a>
   </li>
 </ul>
 <%end%>
+</div>

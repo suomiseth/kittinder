@@ -1,11 +1,16 @@
-<div>
-  <h1>Name:<%=@cat.name%></h1>
+<div class= "show-box">
+  <h1>Name: <%=@cat.name%></h1>
   <!-- figure out how to add real pic to database -->
-  <img src= "/images/cat.jpg" alt="Cat" height="300" width="300">
 
-  <ul>
+  <img src= "<%=@cat.photo_url%>" alt="Cat" height="300" width="300">
+
+  <ul style="list-style-type: none;" class="ul-text">
     <li>
       Color: <%= @cat.color %>
+    </li>
+
+    <li>
+      Gender: <%=@cat.sex %>
     </li>
 
     <li>
