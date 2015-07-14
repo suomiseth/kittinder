@@ -31,7 +31,7 @@ class Cat < ActiveRecord::Base
   end
 
   def my_like_percentage
-    who_likes_me.count / ((who_likes_me.count) + (who_i_rejected.count))
+    who_likes_me.count.to_f / ((who_likes_me.count) + (who_i_rejected.count))
   end
 
   def my_rejection_percentage
