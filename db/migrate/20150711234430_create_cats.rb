@@ -6,6 +6,7 @@ class CreateCats < ActiveRecord::Migration
       t.string :color
       t.text :blurb
       t.integer :owner_id
+      t.string :sex 
 
       t.timestamps null: false
     end
