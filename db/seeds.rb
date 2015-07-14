@@ -8,22 +8,25 @@
 
 5.times do |i|
   i += 1
-  Owner.create(name: "name #{i}", state: "state #{i}", city: "city #{i}")
+  Owner.create(name: "name #{i}", state: "state #{i}", city: "city #{i}", photo_url: "Lorem ipsum dolor.", saying: "Lorem ipsum dolor sit amet.")
 end
 
 10.times do |i|
   i += 1
-  #the first cat won't have an owner... he's a stray. haha.  
   Cat.create(name: "cat #{i}", photo_url: "photo url #{i}", color: "color #{i}", blurb: "Lorem ipsum dolor sit amet.", owner_id: (i / 2))
 end
 
-Like.create(liker_id: 1, liked_id: 10)
-Like.create(liker_id: 2, liked_id: 9)
-Like.create(liker_id: 8, liked_id: 9)
-Like.create(liker_id: 8, liked_id: 4)
-Like.create(liker_id: 6, liked_id: 8)
 
-Match.create(first_match_id: 3, second_match_id: 8)
-Match.create(first_match_id: 4, second_match_id: 7)
-
-Rejection.create(rejector_id: 5, rejected_id: 6)
+Action.create(actor_id: 1, receiver_id: 10, action_type: true)
+Action.create(actor_id: 2, receiver_id: 9, action_type: false)
+Action.create(actor_id: 3, receiver_id: 8)
+Action.create(actor_id: 4, receiver_id: 7, action_type: false)
+Action.create(actor_id: 5, receiver_id: 6, action_type: true)
+Action.create(actor_id: 6, receiver_id: 5)
+Action.create(actor_id: 7, receiver_id: 4, action_type: false)
+Action.create(actor_id: 8, receiver_id: 3, action_type: true)
+Action.create(actor_id: 9, receiver_id: 2)
+Action.create(actor_id: 10, receiver_id: 1, action_type: false)
+Action.create(actor_id: 1, receiver_id: 2, action_type: true)
+Action.create(actor_id: 2, receiver_id: 3)
+Action.create(actor_id: 3, receiver_id: 4, action_type: false)
