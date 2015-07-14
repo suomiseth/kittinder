@@ -11,13 +11,16 @@
   Owner.create(name: "name #{i}", state: "state #{i}", city: "city #{i}", photo_url: "Lorem ipsum dolor.", saying: "Lorem ipsum dolor sit amet.")
 end
 
+
 10.times do |i|
   i += 1
-  Cat.create(name: "cat #{i}", photo_url: "photo url #{i}", color: "color #{i}", blurb: "Lorem ipsum dolor sit amet.", owner_id: (i / 2))
+  Cat.create(name: "cat #{i}", photo_url: "photo url #{i}", color: "color #{i}", blurb: "Lorem ipsum dolor sit amet.", owner_id: ((i / 2.0).round))
 end
 
 
 Action.create(actor_id: 1, receiver_id: 10, action_type: true)
+Action.create(actor_id: 1, receiver_id: 9, action_type: true)
+Action.create(actor_id: 1, receiver_id: 8, action_type: true)
 Action.create(actor_id: 2, receiver_id: 9, action_type: false)
 Action.create(actor_id: 3, receiver_id: 8)
 Action.create(actor_id: 4, receiver_id: 7, action_type: false)
@@ -30,3 +33,6 @@ Action.create(actor_id: 10, receiver_id: 1, action_type: false)
 Action.create(actor_id: 1, receiver_id: 2, action_type: true)
 Action.create(actor_id: 2, receiver_id: 3)
 Action.create(actor_id: 3, receiver_id: 4, action_type: false)
+Action.create(actor_id: 10, receiver_id: 1, action_type: true)
+Action.create(actor_id: 9, receiver_id: 1, action_type: true)
+Action.create(actor_id: 8, receiver_id: 1, action_type: true)
