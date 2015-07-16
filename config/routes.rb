@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   resources :cats, :only => [:index, :show]
   resources :owners, :only => [:index, :show]
-
-  root to: 'static_pages#home' 
+  #resources :actions
+  post 'actions' => 'actions#post'
+  
+  root 'static_pages#home' 
 
 
   # You can have the root of your site routed with "root"

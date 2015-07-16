@@ -10,8 +10,6 @@
 10.times do |i|
   i += 1
   Owner.create(name: "name #{i}", state: "state #{i}", city: "city #{i}")
-  # the first cat won't have an owner... he's a stray. haha.  
-  # Cat.create(name: "cat #{i}", photo_url: "photo url #{i}", color: "color #{i}", blurb: "Lorem ipsum dolor sit amet.", owner_id: (i / 2))
 end
 
 #edit the cat info 
