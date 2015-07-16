@@ -6,6 +6,19 @@ class Cat < ActiveRecord::Base
   validates_presence_of :owner
 
 
+  def self.find_or_create_from_auth_hash(auth_hash)
+    if Cat.find_by(:name => auth_hash[:info][:name])
+      Cat.find_by(:name => auth_hash[:info][:name])
+    else
+      create! do |cat|
+        cat.provider = auth_hash["provider"]
+        cat.uid = auth_hash["uid"]
+        cat.name = auth_hash["info"]["name"]
+        cat.owner = Owner.find(1)
+      end
+    end
+  end
+
   def self.most_likes
     # cat with the most likes total
   end
@@ -41,4 +54,6 @@ class Cat < ActiveRecord::Base
   def my_matches
     who_likes_me & who_i_like
   end
+
+
 end

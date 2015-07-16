@@ -44,5 +44,12 @@ group :development, :test do
   gem 'spring'
   #erd
   gem "rails-erd"
+
+  gem 'figaro'
+  gem 'omniauth'
+  gem 'omniauth-github'
+  gem 'omniauth-twitter'
+  gem 'omniauth-facebook'
+  gem 'omniauth-linkedin'
 end
 

@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20150714005258) do
     t.text     "blurb"
     t.integer  "owner_id"
     t.string   "sex"
+    t.string   "uid"
+    t.string   "provider"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
