@@ -8,11 +8,11 @@
 
 # Owner.create(name: "name #{i}", state: "state #{i}", city: "city #{i}")
 
-# 10.times do |i|
-#   i += 1
-#   #the first cat won't have an owner... he's a stray. haha.  
-#   Cat.create(name: "cat #{i}", photo_url: "photo url #{i}", color: "color #{i}", blurb: "Lorem ipsum dolor sit amet.", owner_id: (i / 2))
-# end
+10.times do |i|
+  i += 1
+  #the first cat won't have an owner... he's a stray. haha.  
+  Owner.create(name: "name #{i}", state: "state #{i}", city: "city #{i}")
+end
 
 #edit the cat info 
 Cat.create(name: "Brad Kitt", sex: "male", photo_url: "http://wallpapersinhq.com/images/medium/a-cool_cat_with_the_glasses-1471504.jpg", color: "gray", blurb: "I'd like to design something like a city or a museum. I want to do something hands on rather than just play golf which is the sport of the religious right.", owner_id: 1)
