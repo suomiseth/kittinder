@@ -16,12 +16,30 @@
         <li><a href="/">Home</a></li>
         <li><a href="/cats">Cats</a></li>
         <li><a href="/owners">Owners</a></li>
-    </ul>
+      </ul>
+
     </div>
   </nav>
+  <!-- <ul>
+    <% if current_cat %>
+      <li>Logged in as: <%= current_cat.name %></li>
+    <% else %>      
+      <li><a href="/auth/twitter">Log in with twitter</a></li>
+      <li><a href="/auth/facebook">Log in with facebook</a></li>
+      <li><a href="/auth/github">Log in with /github</a></li>
+      <li><a href="/auth/linkedin">Log in with linkedin</a></li>
+    <% end %>
+  </ul> -->
   <!-- end navigation bar -->
 
-<%= yield %>
-
+  <%= yield %>
+  <% if current_cat %>
+  <%= "Logged in as: #{current_cat.name}" %> | <%= link_to "Log Out", logout_path %> |
+  <% else %>
+  <%= link_to "log In with twitter", "/auth/twitter" %> |
+  <%= link_to "log In with facebook", "/auth/facebook" %> |
+  <%= link_to "log In with github", "/auth/github" %> |
+  <%= link_to "log In with linkedin", "/auth/linkedin" %> |
+  <% end %>
 </body>
 </html>

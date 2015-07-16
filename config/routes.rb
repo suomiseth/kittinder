@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   
   root 'static_pages#home' 
 
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy', as: :logout
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
