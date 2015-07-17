@@ -1,4 +1,27 @@
-<%= form_tag(actions_path) do %>
-  <%= submit_tag("Yes") %>
-  <%= submit_tag("No") %>
+<%#= form_for(@action) do |f|%>
+<%#= f.hidden_field :actor_id, :value => current_cat.id %> 
+
+  <!-- <div class="field"> -->
+  <%#= f.label :action_type %><br>
+  <%#= f.text_field :action_type %>
+  <!-- </div> -->
+
+<%#= f.hidden_field :receiver_id, :value => @cat.id %> 
+  <%#= f.submit("Yes") %>
+  <%#= f.submit("No") %>
+
+
+
+<%= form_for @action do |f| %>
+  <%= f.label :action_type %>:
+  <%= f.text_field :action_type %><br />
+
+  <%= f.label :actor_id %>:
+  <%= f.text_field :actor_id %><br />
+
+  <%= f.label :receiver_id %>:
+  <%= f.text_field :receiver_id %><br />
+
+
+  <%= f.submit %>
 <% end %>

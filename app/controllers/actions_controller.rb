@@ -1,10 +1,22 @@
 class ActionsController < ApplicationController
-    def create
+  # before_action :cat_params
+  def create
+    binding.pry
+    @action = Action.new(cat_params)
+    # binding.pry
     if params[:commit] == 'Yes'
-      raise 'Yay'
+      
+#actor_id, receiver_id, action_type 
       #take params[:id] and set it in action model. make method in model?
     elsif params[:commit] == 'No'
       #do something
     end 
   end
+
+
+private
+  def cat_params
+    # params.require(:action).permit(:action_type, :receiver_id, :actor_id)
+  end
+
 end
