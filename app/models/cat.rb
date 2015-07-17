@@ -1,7 +1,7 @@
 class Cat < ActiveRecord::Base
   belongs_to :owner
-  has_many :actions_as_actor, :class_name => "Action", :foreign_key => :actor_id
-  has_many :actions_as_receiver, :class_name => "Action", :foreign_key => :receiver_id
+  has_many :matches_as_actor, :class_name => "Match", :foreign_key => :actor_id
+  has_many :matches_as_receiver, :class_name => "Match", :foreign_key => :receiver_id
 
   validates_presence_of :owner
 
@@ -28,19 +28,19 @@ class Cat < ActiveRecord::Base
   end
 
   def who_likes_me
-    actions_as_receiver.where(action_type: true).map {|action| action.actor }
+    matches_as_receiver.where(match_type: true).map {|match| match.actor }
   end
 
-  def who_rejected_me
-    actions_as_receiver.where(action_type: false).map {|action| action.actor }
+  def who_rejected_mef
+    matches_as_receiver.where(match_type: false).map {|match| match.actor }
   end
 
   def who_i_like
-    actions_as_actor.where(action_type: true).map {|action| action.receiver }
+    matches_as_actor.where(match_type: true).map {|match| match.receiver }
   end
 
   def who_i_rejected
-    actions_as_actor.where(action_type: false).map {|action| action.receiver }
+    matches_as_actor.where(match_type: false).map {|match| match.receiver }
   end
 
   def my_like_percentage
@@ -54,6 +54,4 @@ class Cat < ActiveRecord::Base
   def my_matches
     who_likes_me & who_i_like
   end
-
-
 end

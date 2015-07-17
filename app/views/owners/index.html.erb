@@ -1,12 +1,16 @@
 <div class="index">
-<h1>The Owner's Den</h1>
+  <h1>The Owner's Den</h1>
 
-<% @owners.each do |owner|%>
-<ul style="list-style-type: none;">
-  <li>
-    <!-- we should put a url for owner's data with pictures, too -->
-    <a href="/owners/<%=owner.id%>"><%=owner.name%></a>
-  </li>
-</ul>
-<%end%>
+  <% @owners.each do |owner|%>
+  <div class="index-list">
+      <ul style="list-style-type: none;">
+        <li>
+          <p>
+          <img src="<%= owner.photo_url %>" alt="Owner" height="30" width="30">
+          </p>
+          <a href="/owners/<%=owner.id%>"><%=owner.name%></a>
+        </li>
+      </ul>
+    </div>
+  <%end%>
 </div>

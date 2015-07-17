@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
     @cat = Cat.all.sample(1).first
-    render 'home'
+    @match = Match.new
   end
 end

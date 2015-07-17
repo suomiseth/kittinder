@@ -1,8 +1,3 @@
-<!-- <%= form_tag(matches_path) do %>
-  <%= submit_tag("Yes") %>
-  <%= submit_tag("No") %>
-<% end %> -->
-
 <%= form_for(@match) do |f| %>
 <%= f.label :match_type %>
 <%= f.text_field :match_type %>

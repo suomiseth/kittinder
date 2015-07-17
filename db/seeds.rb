@@ -9,7 +9,7 @@
 
 10.times do |i|
   i += 1
-  Owner.create(name: "name #{i}", state: "state #{i}", city: "city #{i}")
+  Owner.create(name: "crazy cat lady #{i}", state: "NY", city: "NYC", photo_url: "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg")
 end
 
 #edit the cat info 
@@ -36,21 +36,21 @@ Cat.create(name: "Kitler",sex: "male", photo_url: "http://static.boredpanda.com/
 Cat.create(name: "Cleopatra",sex: "female", photo_url: "http://cdn.buzznet.com/assets/users6/beachut/default/lemon-head-cat--large-msg-1109380671-2.jpg", color: "White", blurb: "You be the Dairy Queen and I’ll be your Burger King: You treat me right, and I’ll do it your way.", owner_id: 15)
 
 
-Action.create(actor_id: 1, receiver_id: 10, action_type: true)
-Action.create(actor_id: 1, receiver_id: 9, action_type: true)
-Action.create(actor_id: 1, receiver_id: 8, action_type: true)
-Action.create(actor_id: 2, receiver_id: 9, action_type: false)
-Action.create(actor_id: 3, receiver_id: 8)
-Action.create(actor_id: 4, receiver_id: 7, action_type: false)
-Action.create(actor_id: 5, receiver_id: 6, action_type: true)
-Action.create(actor_id: 6, receiver_id: 5)
-Action.create(actor_id: 7, receiver_id: 4, action_type: false)
-Action.create(actor_id: 8, receiver_id: 3, action_type: true)
-Action.create(actor_id: 9, receiver_id: 2)
-Action.create(actor_id: 10, receiver_id: 1, action_type: false)
-Action.create(actor_id: 1, receiver_id: 2, action_type: true)
-Action.create(actor_id: 2, receiver_id: 3)
-Action.create(actor_id: 3, receiver_id: 4, action_type: false)
-Action.create(actor_id: 10, receiver_id: 1, action_type: true)
-Action.create(actor_id: 9, receiver_id: 1, action_type: true)
-Action.create(actor_id: 8, receiver_id: 1, action_type: true)
+Match.create(actor_id: 1, receiver_id: 10, match_type: true)
+Match.create(actor_id: 1, receiver_id: 9, match_type: true)
+Match.create(actor_id: 1, receiver_id: 8, match_type: true)
+Match.create(actor_id: 2, receiver_id: 9, match_type: false)
+Match.create(actor_id: 3, receiver_id: 8)
+Match.create(actor_id: 4, receiver_id: 7, match_type: false)
+Match.create(actor_id: 5, receiver_id: 6, match_type: true)
+Match.create(actor_id: 6, receiver_id: 5)
+Match.create(actor_id: 7, receiver_id: 4, match_type: false)
+Match.create(actor_id: 8, receiver_id: 3, match_type: true)
+Match.create(actor_id: 9, receiver_id: 2)
+Match.create(actor_id: 10, receiver_id: 1, match_type: false)
+Match.create(actor_id: 1, receiver_id: 2, match_type: true)
+Match.create(actor_id: 2, receiver_id: 3)
+Match.create(actor_id: 3, receiver_id: 4, match_type: false)
+Match.create(actor_id: 10, receiver_id: 1, match_type: true)
+Match.create(actor_id: 9, receiver_id: 1, match_type: true)
+Match.create(actor_id: 8, receiver_id: 1, match_type: true)
