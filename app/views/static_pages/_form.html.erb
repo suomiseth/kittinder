@@ -1,10 +1,11 @@
-<!-- <%= form_tag(matches_path) do %>
+ <%= form_tag(create_matches_path) do %>
+<%= hidden_field_tag 'receiver_id', @cat.id %>
   <%= submit_tag("Yes") %>
   <%= submit_tag("No") %>
-<% end %> -->
+<%end %> 
 
-<%= form_for(@match) do |f| %>
-<%= f.label :match_type %>
-<%= f.text_field :match_type %>
-<%= f.submit %>
-<% end %>
+<%#= form_for(@match) do |f| %>
+<%#= f.label :match_type %>
+<%#= f.text_field :match_type %>
+<%#= f.submit %>
+<%# end %>

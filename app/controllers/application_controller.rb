@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   
   def current_cat
     @current_cat ||= Cat.find(session[:cat_id]) if session[:cat_id]
+
   end
 
   helper_method :current_cat
