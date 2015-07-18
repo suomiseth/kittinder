@@ -19,9 +19,9 @@
 <div class="index">
   <h2>Owned Cats:</h2>
 
-  <% @owner.cats.each do |cat| %>
+  <%@owner.cats.each do |cat|%>
   <div class="index-list">
-    <ul class="list-style-type: none;">
+    <ul style="list-style-type: none;">
       <li>
         <p>
           <a href="/cats/<%= cat.id %>"><img src= "<%=cat.photo_url%>" alt="Cat" height="30" width="30"></a>

@@ -1,6 +1,5 @@
 class Owner < ActiveRecord::Base
   has_many :cats
-  # delegate :state, to: :cat
 
   def matched_owners_in_my_state
     cats.map do |cat| 

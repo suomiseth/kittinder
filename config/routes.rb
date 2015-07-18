@@ -4,8 +4,7 @@ Rails.application.routes.draw do
   resources :owners, :only => [:index, :show]
   resources :matches
 
-  # post '/matches' => 'matches#create'
-  # get '/matches/new', to: 'matches#new'
+  post '/matches' => 'matches#create', as: :create_matches
   
   root 'static_pages#home' 
 
