@@ -8,6 +8,7 @@ before_action :set_cat, only: [:show, :edit, :update, :destroy]
 
   def show
     @cats = Cat.all
+    @match = Match.all
   end
 
   private

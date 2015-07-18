@@ -21,6 +21,41 @@
       Owner: <a href="/owners/<%= @cat.owner_id %>"><%= @cat.owner.name %></a>
       <!-- this has a problem - it breaks for cats without an owner - we should add a validation to require an owner or make this code allow for nil values -->
     </li>
+
   </ul>
 </div>
 
+<div>
+  <%# if @cat. %>
+    <ul style="list-style-type: none;" class="ul-text">
+        <h3>Matches: </h3>
+        <% @cat.my_matches.each do |cat|%>
+        <li>
+        <%= cat.name %>
+        </li>
+        <%end%> 
+      </ul>
+</div>
+
+<div>
+    <ul style="list-style-type: none;" class="ul-text">
+        <h3>Cats I've Liked: </h3>
+        <% @cat.who_i_like.each do |cat|%>
+        <li>
+        <%= cat.name %>
+        </li>
+        <%end%> 
+      </ul>
+</div>
+
+
+<div>
+    <ul style="list-style-type: none;" class="ul-text">
+        <h3>Cats I Rejected: </h3>
+        <%@cat.who_i_rejected.each do |cat|%>
+        <li>
+        <%= cat.name %>
+        </li>
+        <%end%> 
+      </ul>
+</div>
