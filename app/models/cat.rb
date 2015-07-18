@@ -31,7 +31,7 @@ class Cat < ActiveRecord::Base
     matches_as_receiver.where(match_type: true).map {|match| match.actor }
   end
 
-  def who_rejected_mef
+  def who_rejected_me
     matches_as_receiver.where(match_type: false).map {|match| match.actor }
   end
 
