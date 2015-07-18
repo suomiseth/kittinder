@@ -12,6 +12,79 @@
   Owner.create(name: "crazy cat lady #{i}", state: "NY", city: "NYC", photo_url: "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg")
 end
 
+###### seed the db with owner data
+Owner.create(
+  name: "Chuck Norris",
+  state: "No one knows",
+  city: "No one knows",
+  photo_url: "http://cdn.playbuzz.com/cdn/cb7190c0-906c-4bfc-8725-2d308c40f60a/e0949af2-7ba9-4fe3-8d95-df5d15af0661.jpg",
+  saying: "Death once had a near-Chuck-Norris experience."
+  )
+
+Owner.create(
+  name: "Oprah Winfrey",
+  state: "CA",
+  city: "LA",
+  photo_url: "http://38.media.tumblr.com/tumblr_lifw7mP0761qz7o2oo1_400.gif",
+  saying: "You get a cat... and you get a cat.... and you..."
+  )
+
+Owner.create(
+  name: "Jay-Z",
+  state: "NY",
+  city: "NYC",
+  photo_url: "https://a3-images.myspacecdn.com/images03/35/a03b92e0338b4b229ae5e3cb379a2907/300x300.jpg",
+  saying: "My cat is better than Nas' cat"
+  )
+
+Owner.create(
+  name: "Michelle Obama",
+  state: "MD",
+  city: "DC",
+  photo_url: "http://i.ytimg.com/vi/mbICDkQb46g/maxresdefault.jpg",
+  saying: ""
+  )
+
+Owner.create(
+  name: "Mike Tyson",
+  state: "NV",
+  city: "Las Vegas",
+  photo_url: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSkRA3zXLwqRyjtTNOR1amvjni274ds6jEvT-JPc3KdqiTATw_Wwg",
+  saying: "I just want to conquer people and their souls."
+  )
+
+Owner.create(
+  name: "Neo",
+  state: "Zion",
+  city: "Zion",
+  photo_url: "http://scifidramaqueen.files.wordpress.com/2011/01/the-matrix-neo.jpg",
+  saying: "There is no spoon"
+  )
+
+Owner.create(
+  name: "Marshall Mathers",
+  state: "MI",
+  city: "D-town",
+  photo_url: "https://s-media-cache-ak0.pinimg.com/236x/9b/66/43/9b6643bc6656fcbbed52410c2f010d0b.jpg",
+  saying: "Why am I so angry all the time?"
+  )
+
+Owner.create(
+  name: "This Weird Guy",
+  state: "AL",
+  city: "Cullman",
+  photo_url: "http://i.imgur.com/tFWOl.jpg",
+  saying: "What?"
+  )
+
+Owner.create(
+  name: "I like turtles",
+  state: "I like turtles",
+  city: "I like turtles",
+  photo_url: "http://38.media.tumblr.com/tumblr_lv4mlsbfCc1qkhtxx.png",
+  saying: "I like tutles"
+  )
+
 #edit the cat info 
 Cat.create(name: "Brad Kitt", sex: "male", photo_url: "http://wallpapersinhq.com/images/medium/a-cool_cat_with_the_glasses-1471504.jpg", color: "gray", blurb: "I'd like to design something like a city or a museum. I want to do something hands on rather than just play golf which is the sport of the religious right.", owner_id: 1)
 Cat.create(name: "Catalie Portman",sex: "female", photo_url: "http://s3.favim.com/orig/47/cat-cute-kitty-Favim.com-433645.jpg", color: "Calico", blurb: "Cute is when a person's personality shines through their looks. Like in the way they walk, every time you see them you just want to run up and hug them.", owner_id: 2)
@@ -34,6 +107,20 @@ Cat.create(name: "Nala", sex: "female",photo_url: "http://static.boredpanda.com/
 Cat.create(name: "Banye", sex: "female",photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-banye-omg-cat-1__605.jpg", color: "white/gray", blurb: "OMG", owner_id: 12)
 Cat.create(name: "Kitler",sex: "male", photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/kitler-1__605.jpg", color: "White", blurb: "Struggle is the father of all things. It is not by the principles of humanity that man lives or is able to preserve himself above the animal world, but solely by means of the most brutal struggle.", owner_id: 14)
 Cat.create(name: "Cleopatra",sex: "female", photo_url: "http://cdn.buzznet.com/assets/users6/beachut/default/lemon-head-cat--large-msg-1109380671-2.jpg", color: "White", blurb: "You be the Dairy Queen and I’ll be your Burger King: You treat me right, and I’ll do it your way.", owner_id: 15)
+# chuck norris' cat
+Cat.create(name: "Walker, Texas Ranger",sex: "male", photo_url: "http://i1300.photobucket.com/albums/ag95/partycatt/artworks-000076947994-7vk63n-original_zpsb15b0921.jpg", color: "Chuck Norris Colored", blurb: "You want a roundhouse kick to face from someone wearing these pants?", owner_id: 15)
+# eminem's cat
+Cat.create(name: "Shady",sex: "female", photo_url: "https://s-media-cache-ak0.pinimg.com/236x/f0/fa/51/f0fa51b929d29f70aba2ea70cc7a58e4.jpg", color: "white", blurb: "Why am I so angry all the time?", owner_id: 15)
+
+
+
+
+
+## cats we can log in as
+## twitter username: @_sexy_cat, password: sexycat ## 
+Cat.create(name: "pretty sexy cat",sex: "male", photo_url: "https://reportsfromtherock.files.wordpress.com/2014/12/giphy-5.gif", color: "Mix", blurb: "Party's over.", owner_id: 10)
+## github username: el-tigre-de-internet, password: eltigre1 ## this is mike tyson's cat
+Cat.create(name: "el tigre",sex: "male", photo_url: "http://artatm.com/wp-content/uploads/2011/07/running_tiger.jpg", color: "orange", blurb: "hey...... ", owner_id: 1)
 
 
 Match.create(actor_id: 1, receiver_id: 10, match_type: true)
