@@ -45389,3 +45389,387 @@ Processing by CatsController#show as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
   Rendered cats/show.html.erb within layouts/application (24.8ms)
 Completed 200 OK in 72ms (Views: 68.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 19:45:31 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (2.4ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (10.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 267ms (Views: 225.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-18 19:45:41 -0400
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.4ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-18 19:45:51 -0400
+Processing by OwnersController#index as HTML
+  [1m[35mOwner Load (0.2ms)[0m  SELECT "owners".* FROM "owners"
+  Rendered owners/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-18 19:46:01 -0400
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.6ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-18 19:46:03 -0400
+Processing by OwnersController#index as HTML
+  [1m[35mOwner Load (0.3ms)[0m  SELECT "owners".* FROM "owners"
+  Rendered owners/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-18 19:47:25 -0400
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.4ms)[0m  [1mSELECT "owners".* FROM "owners"[0m
+  Rendered owners/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 152ms (Views: 150.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-5cf733e9f3c1ea4e1da5c55a81d677eedd3be9712d5c3ae8e3027e330ea187f5.css?body=1" for ::1 at 2015-07-18 19:47:26 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 19:47:26 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 19:47:26 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:47:26 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 19:47:26 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:47:26 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 19:47:26 -0400
+
+
+Started GET "/owners" for ::1 at 2015-07-18 19:48:38 -0400
+Processing by OwnersController#index as HTML
+  [1m[35mOwner Load (0.5ms)[0m  SELECT "owners".* FROM "owners"
+  Rendered owners/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 184ms (Views: 182.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-1d7aa74ba37eab0915a647c7ceb931949c78d621f7df8284e93220efd2f8b464.css?body=1" for ::1 at 2015-07-18 19:48:39 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 19:48:39 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 19:48:39 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:48:39 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:48:39 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 19:48:39 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 19:48:39 -0400
+
+
+Started GET "/owners" for ::1 at 2015-07-18 19:48:55 -0400
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.3ms)[0m  [1mSELECT "owners".* FROM "owners"[0m
+  Rendered owners/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-29b180e4e2b3e05dd94e3ffe1322dd5b19b531b39dad2a71f7446504b0c5b6fb.css?body=1" for ::1 at 2015-07-18 19:48:56 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 19:48:56 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:48:56 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 19:48:56 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:48:56 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 19:48:56 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 19:48:56 -0400
+
+
+Started GET "/owners" for ::1 at 2015-07-18 19:49:37 -0400
+Processing by OwnersController#index as HTML
+  [1m[35mOwner Load (0.3ms)[0m  SELECT "owners".* FROM "owners"
+  Rendered owners/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-29b180e4e2b3e05dd94e3ffe1322dd5b19b531b39dad2a71f7446504b0c5b6fb.css?body=1" for ::1 at 2015-07-18 19:49:37 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 19:49:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 19:49:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 19:49:37 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:49:37 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:49:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 19:49:38 -0400
+
+
+Started GET "/owners" for ::1 at 2015-07-18 19:50:50 -0400
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.5ms)[0m  [1mSELECT "owners".* FROM "owners"[0m
+  Rendered owners/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 167ms (Views: 162.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-b01d9a76de0e3df29032befb6a2ee1d4c295ed8716e5fce241b543c1dc6e42eb.css?body=1" for ::1 at 2015-07-18 19:50:51 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 19:50:51 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 19:50:51 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 19:50:51 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 19:50:51 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:50:51 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:50:51 -0400
+
+
+Started GET "/owners/1" for ::1 at 2015-07-18 19:50:58 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOwner Load (0.4ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 1]]
+  Rendered owners/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-18 19:53:27 -0400
+Processing by OwnersController#index as HTML
+  [1m[35mOwner Load (0.2ms)[0m  SELECT "owners".* FROM "owners"
+  Rendered owners/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-18 19:53:30 -0400
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-18 19:53:34 -0400
+Processing by OwnersController#index as HTML
+  [1m[35mOwner Load (0.5ms)[0m  SELECT "owners".* FROM "owners"
+  Rendered owners/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/10" for ::1 at 2015-07-18 19:53:37 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCat Load (0.7ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mMatch Load (0.2ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 10], ["match_type", "t"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 10], ["match_type", "t"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 10], ["match_type", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 10], ["match_type", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 10], ["match_type", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 10], ["match_type", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 10], ["match_type", "f"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 10], ["match_type", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 10], ["match_type", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 10], ["match_type", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 10], ["match_type", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 10], ["match_type", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 10], ["match_type", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 10], ["match_type", false]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered cats/show.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 80ms (Views: 75.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cats/19" for ::1 at 2015-07-18 19:53:54 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mMatch Load (0.3ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 19], ["match_type", "t"]]
+  [1m[35mMatch Load (0.4ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?  [["actor_id", 19], ["match_type", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 19], ["match_type", true]]
+  [1m[35mMatch Load (0.1ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?  [["actor_id", 19], ["match_type", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 19], ["match_type", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?  [["receiver_id", 19], ["match_type", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 19], ["match_type", false]]
+  Rendered cats/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 19:54:05 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (0.3ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (1.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/matches" for ::1 at 2015-07-18 19:54:18 -0400
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Ia65XHR44+72isvGgEiBW03ukOJfmwl7324pc+K5mSz9+SLhh/85qkJJ0sGeotHOckc/atLvjDePovEE3jmRg==", "receiver_id"=>"5", "commit"=>"Yes, Please"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 19:54:18 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mCat Load (1.4ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered static_pages/_form.html.erb (5.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 115ms (Views: 100.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/matches" for ::1 at 2015-07-18 19:54:20 -0400
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ipaqZD1tp273O95HoaEeUeKd9oc8oJQfbupjD9keujLt5/QKyqO4B+Xo0iO92rcTtmNQOR6VRgpfqVBuBey6EA==", "receiver_id"=>"23", "commit"=>"Yes, Please"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 19:54:20 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (0.4ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 19:55:07 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mCat Load (0.9ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered static_pages/_form.html.erb (0.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 113ms (Views: 109.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 19:55:07 -0400
+
+
+Started GET "/assets/application.self-e2eef083bc63cf6d076c3dff3e883c30b64862f3abb5950fe19fdba7bfa12ef8.css?body=1" for ::1 at 2015-07-18 19:55:07 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 19:55:07 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 19:55:07 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:55:07 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:55:07 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 19:55:07 -0400
+
+
+Started GET "/" for ::1 at 2015-07-18 19:55:28 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (0.6ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (0.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 84ms (Views: 78.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 19:55:28 -0400
+
+
+Started GET "/assets/application.self-b9a0f5de955f19d25d04371f1c04ca0389fbb851559a1a39230c99d5ce0b63fb.css?body=1" for ::1 at 2015-07-18 19:55:28 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:55:28 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:55:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 19:55:28 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 19:55:28 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 19:55:28 -0400
+
+
+Started GET "/" for ::1 at 2015-07-18 19:55:35 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered static_pages/_form.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 19:55:35 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 19:55:35 -0400
+
+
+Started GET "/assets/application.self-e2eef083bc63cf6d076c3dff3e883c30b64862f3abb5950fe19fdba7bfa12ef8.css?body=1" for ::1 at 2015-07-18 19:55:35 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:55:35 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 19:55:35 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 19:55:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 19:55:35 -0400
