@@ -21,6 +21,40 @@
       Owner: <a href="/owners/<%= @cat.owner_id %>"><%= @cat.owner.name %></a>
       <!-- this has a problem - it breaks for cats without an owner - we should add a validation to require an owner or make this code allow for nil values -->
     </li>
+
   </ul>
 </div>
 
+<div>
+    <ul style="list-style-type: none;" class="ul-text">
+        <h3>Matches: </h3>
+        <% @cat.who_likes_me.map do |cat|%>
+        <li>
+        <%= cat.name %>
+        </li>
+        <%end%> 
+      </ul>
+</div>
+
+<div>
+    <ul style="list-style-type: none;" class="ul-text">
+        <h3>Cats I've Liked: </h3>
+        <% @cat.who_i_like.map do |cat|%>
+        <li>
+        <%= cat.name %>
+        </li>
+        <%end%> 
+      </ul>
+</div>
+
+
+<div>
+    <ul style="list-style-type: none;" class="ul-text">
+        <h3>Cats I Rejected: </h3>
+        <%@cat.who_i_rejected.map do |cat|%>
+        <li>
+        <%= cat.name %>
+        </li>
+        <%end%> 
+      </ul>
+</div>

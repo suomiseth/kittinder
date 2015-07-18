@@ -2,6 +2,7 @@ class MatchesController < ApplicationController
 # before_action :set_user
 
   def create
+    binding.pry
     if params[:commit] == 'Yes'
       @match = Match.new
       @match.match_type = true
