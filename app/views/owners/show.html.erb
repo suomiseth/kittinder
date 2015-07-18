@@ -1,3 +1,4 @@
+<div class= "layout">
 <div class="show-box">
   <h1><%=@owner.name%></h1>
 
@@ -16,8 +17,9 @@
   </ul>
 </div>
 
+
+  <center><h2>Owned Cats:</h2></center>
 <div class="index">
-  <h2>Owned Cats:</h2>
 
   <%@owner.cats.each do |cat|%>
   <div class="index-list">
@@ -26,9 +28,10 @@
         <p>
           <a href="/cats/<%= cat.id %>"><img src= "<%=cat.photo_url%>" alt="Cat" height="30" width="30"></a>
         </p>
-        <!-- <a href="/cats/<%=cat.id%>"><%= cat.name %></a> -->
+        <a href="/cats/<%=cat.id%>"><%= cat.name %></a>
       </li>
     </ul>
   </div>
   <% end %>
+</div>
 </div>

@@ -13,11 +13,12 @@
     <div id="menu" class="menu">
       <!-- Example responsive navigation menu  -->
       <ul class="menu-items">
-        <li><a href="/">Home</a></li>
+        <li><a href="/">Kittinder</a></li>
         <li><a href="/cats">Cats</a></li>
         <li><a href="/owners">Owners</a></li>
         <li><div align="right" class=""> <% if current_cat %>
-          <%= "Logged in as: #{current_cat.name}" %> | <%= link_to "Log Out", logout_path %> |
+          <%= "My Profile:" %>
+          <%= link_to current_cat.name, cat_path(current_cat) %> | <%= link_to "Log Out", logout_path %> |
           <% else %>
           Log in with:
           <%= link_to image_tag("http://static.wixstatic.com/media/9199b4_5b866e13d9be4a36844f33bc58f562dc.png", size: "25"), "/auth/twitter" %>
@@ -28,17 +29,7 @@
 
     </div>
   </nav>
-  <!-- <ul>
-    <% if current_cat %>
-      <li>Logged in as: <%= current_cat.name %></li>
-    <% else %>      
-      <li><a href="/auth/twitter">Log in with twitter</a></li>
-      <li><a href="/auth/facebook">Log in with facebook</a></li>
-      <li><a href="/auth/github">Log in with /github</a></li>
-      <li><a href="/auth/linkedin">Log in with linkedin</a></li>
-    <% end %>
-  </ul> -->
-  <!-- end navigation bar -->
+
 
   <%= yield %>
 

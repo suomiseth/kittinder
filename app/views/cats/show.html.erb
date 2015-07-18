@@ -1,61 +1,89 @@
-<div class= "show-box">
-  <h1>Name: <%=@cat.name%></h1>
-  <!-- figure out how to add real pic to database -->
+<div class = "layout">
+  <div class= "show-box">
+    <h1>Name: <%=@cat.name%></h1>
+    <!-- figure out how to add real pic to database -->
 
-  <img src= "<%=@cat.photo_url%>" alt="Cat" height="300" width="300">
+    <img src= "<%=@cat.photo_url%>" alt="Cat" height="300" width="300">
 
-  <ul style="list-style-type: none;" class="ul-text">
-    <li>
-      Color: <%= @cat.color %>
-    </li>
-
-    <li>
-      Gender: <%=@cat.sex %>
-    </li>
-
-    <li>
-      Description: <%=@cat.blurb %>
-    </li>
-
-    <li>
-      Owner: <a href="/owners/<%= @cat.owner_id %>"><%= @cat.owner.name %></a>
-      <!-- this has a problem - it breaks for cats without an owner - we should add a validation to require an owner or make this code allow for nil values -->
-    </li>
-
-  </ul>
-</div>
-
-<div>
-  <%# if @cat. %>
     <ul style="list-style-type: none;" class="ul-text">
-        <h3>Matches: </h3>
+      <li>
+        Color: <%= @cat.color %>
+      </li>
+
+      <li>
+        Gender: <%=@cat.sex %>
+      </li>
+
+      <li>
+        Description: <%=@cat.blurb %>
+      </li>
+
+      <li>
+        Owner: <a href="/owners/<%= @cat.owner_id %>"><%= @cat.owner.name %></a>
+        <!-- this has a problem - it breaks for cats without an owner - we should add a validation to require an owner or make this code allow for nil values -->
+      </li>
+
+    </ul>
+  </div>
+
+  <div class= "bottom-columns">
+    <% if !(@cat.my_matches.empty?)%>
+    <div class= "show-column">
+      <ul style="list-style-type: none;" class="ul-text">
+        <h3><%= "Matches:" %></h3>
         <% @cat.my_matches.each do |cat|%>
         <li>
-        <%= cat.name %>
+          <%= link_to cat.name, cat_path(cat) %>
         </li>
         <%end%> 
       </ul>
-</div>
+    </div>
+    <%end%>
 
-<div>
-    <ul style="list-style-type: none;" class="ul-text">
-        <h3>Cats I've Liked: </h3>
+    <% if !@cat.who_i_like.empty? %>
+    <div class= "show-column">
+      <ul style="list-style-type: none;" class="ul-text">
+        <h3><%= "My Wishlist:" %></h3>
         <% @cat.who_i_like.each do |cat|%>
         <li>
-        <%= cat.name %>
+          <%= link_to cat.name, cat_path(cat)%>
         </li>
         <%end%> 
       </ul>
-</div>
+    </div>
+    <%end%>
 
+    <% if !@cat.who_i_rejected.empty? %>
+    <div class= "show-column">
+      <ul style="list-style-type: none;" class="ul-text">
+        <h3><%= "Cats I Rejected:" %></h3>
+        <%@cat.who_i_rejected.each do |cat|%>
+        <li>
+          <%= cat.name %>
+        </li>
+        <%end%> 
+      </ul>
+    </div>
+    <%end%>
 
-<div class="show-box">
-    <ul style="list-style-type: none;" class="ul-text">
+    <% if @cat.my_like_percentage > 0 %>
+    <div class= "show-column">
+      <ul style="list-style-type: none;" class="ul-text">
+        <h3><%= "My Hotness Percentage:" %></h3>
+        <%=((@cat.my_like_percentage).to_i*100)%>%
+      </ul>
+    </div>
+    <%end%>
+
+    <div class="show-box">
+      <ul style="list-style-type: none;" class="ul-text">
         <h3>Cats I Rejected: </h3>
         <%@cat.who_i_rejected.each do |cat|%>
         <li>
-        <%= cat.name %>
+          <%= cat.name %>
         </li>
         <%end%> 
       </ul>
+    </div>
+  </div>
 </div>

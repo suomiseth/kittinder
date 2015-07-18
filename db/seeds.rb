@@ -7,10 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-10.times do |i|
-  i += 1
-  Owner.create(name: "crazy cat lady #{i}", state: "NY", city: "NYC", photo_url: "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg")
-end
+# 10.times do |i|
+#   i += 1
+#   Owner.create(name: "crazy cat lady #{i}", state: "NY", city: "NYC", photo_url: "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg")
+# end
 
 ###### seed the db with owner data
 Owner.create(
@@ -42,7 +42,7 @@ Owner.create(
   state: "MD",
   city: "DC",
   photo_url: "http://i.ytimg.com/vi/mbICDkQb46g/maxresdefault.jpg",
-  saying: ""
+  saying: "I never cut class. I loved getting A’s, I liked being smart. I liked being on time. I thought being smart is cooler than anything in the world."
   )
 
 Owner.create(
@@ -93,25 +93,25 @@ Cat.create(name: "Max",sex: "male", photo_url: "/images/cat.jpg", color: "orange
 Cat.create(name: "Pumpkin",sex: "female", photo_url: "http://farm3.static.flickr.com/2177/1808395977_5c6a1ea382.jpg", color: "orange", blurb: "Pumpkin Pie!", owner_id: 4)
 Cat.create(name: "Cupcakes",sex: "female", photo_url: "https://41.media.tumblr.com/c1126344e2d4971dc734c177c59b64ca/tumblr_myx82s2Lh51shf8zxo1_500.jpg", color: "white/gray", blurb: "I love cupcakes. Get me a cupcake.", owner_id: 5)
 Cat.create(name: "Doctor Mew",sex: "male", photo_url: "http://4everstatic.com/pictures/674xX/fun/animals/doctor,-cat-213520.jpg", color: "brown", blurb: "Can I take your temperature? Because you're looking hot today.", owner_id: 6)
-Cat.create(name: "Kit Romney",sex: "male", photo_url: "http://stylonica.com/wp-content/uploads/2014/03/cute-cat-picture-wallpaper.jpg", color: "white/gray", blurb: "Global warming obviously doesn't exist - YOU'RE the one heating up the place!", owner_id: 7)
+Cat.create(name: "Kit Romney",sex: "male", photo_url: "http://cdn2-b.examiner.com/sites/default/files/styles/image_content_width/hash/bc/14/A%20GOP%20Fat%20Cat.jpg?itok=GjSYDrBw", color: "gray", blurb: "Global warming obviously doesn't exist - YOU'RE the one heating up the place!", owner_id: 7)
 Cat.create(name: "Robert Kattison",sex: "male", photo_url: "http://f.tqn.com/y/petsupplies/1/S/Y/1/-/-/c5.jpg", color: "gray/black", blurb: "Twilight? No.. haven’t heard of it", owner_id: 8)
 Cat.create(name: "Marshmallow",sex: "male", photo_url: "http://in.bookmyshow.com/entertainment/wp-content/uploads/image/1do%20not%20open-curiosity%20killed%20the%20cat/this%20cat%20that%20reminds%20you%20of%20a%20marshmallow.jpg", color: "white/orange", blurb: "We're like hot chocolate and marshmallows. You're hot and I want to be on top of you.", owner_id: 9)
-Cat.create(name: "Bubz",sex: "male", photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-lil-bub-2.jpg", color: "gray", blurb: "Blub blub", owner_id: 10)
+Cat.create(name: "Bubz",sex: "male", photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-lil-bub-2.jpg", color: "gray", blurb: "Blub blub", owner_id: 9)
 Cat.create(name: "Grumpy Cat", sex: "male",photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-grumpy-cat-4.jpg", color: "white/brown", blurb: "I like long walks, especially when they are taken by poeople who annoy me.", owner_id: 11)
-Cat.create(name: "Pusheen", sex: "male",photo_url: "http://38.media.tumblr.com/tumblr_lkqkraG6741qhy6c9o1_400.gif", color: "gray", blurb: "I like to eat, sleep, and eat some more.", owner_id: 12)
-Cat.create(name: "Maru",sex: "female", photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/famous-internet-cats-221.jpg", color: "white/gray/brown", blurb: "I am the master of boxes.", owner_id: 13)
-Cat.create(name: "Garfield",sex: "male", photo_url: "https://outnow.ch/Media/Movies/Bilder/2006/Garfield2/movie.ws/09.jpg", color: "orange", blurb: "Eat every meal as though it were your last.", owner_id: 14)
-Cat.create(name: "Shironeko",sex: "female", photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/shironeko-happy-cat-62.jpg", color: "white", blurb: "I like to sleep.", owner_id: 15)
+Cat.create(name: "Pusheen", sex: "male",photo_url: "http://38.media.tumblr.com/tumblr_lkqkraG6741qhy6c9o1_400.gif", color: "gray", blurb: "I like to eat, sleep, and eat some more.", owner_id: 2)
+Cat.create(name: "Maru",sex: "female", photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/famous-internet-cats-221.jpg", color: "white/gray/brown", blurb: "I am the master of boxes.", owner_id: 8)
+Cat.create(name: "Garfield",sex: "male", photo_url: "https://outnow.ch/Media/Movies/Bilder/2006/Garfield2/movie.ws/09.jpg", color: "orange", blurb: "Eat every meal as though it were your last.", owner_id: 4)
+Cat.create(name: "Shironeko",sex: "female", photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/shironeko-happy-cat-62.jpg", color: "white", blurb: "I like to sleep.", owner_id: 5)
 Cat.create(name: "Hamilton",sex: "male", photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-hamilton-11__605.jpg", color: "white/gray", blurb: "Enter coffee shop – stay all day", owner_id: 6)
 Cat.create(name: "Nala", sex: "female",photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/famous-internet-cats-2__605.jpg", color: "gray", blurb: "AHHHHHHHHHH!", owner_id: 7)
 
-Cat.create(name: "Banye", sex: "female",photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-banye-omg-cat-1__605.jpg", color: "white/gray", blurb: "OMG", owner_id: 12)
+Cat.create(name: "Banye", sex: "female",photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-banye-omg-cat-1__605.jpg", color: "white/gray", blurb: "OMG", owner_id: 8)
 Cat.create(name: "Kitler",sex: "male", photo_url: "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/kitler-1__605.jpg", color: "White", blurb: "Struggle is the father of all things. It is not by the principles of humanity that man lives or is able to preserve himself above the animal world, but solely by means of the most brutal struggle.", owner_id: 14)
-Cat.create(name: "Cleopatra",sex: "female", photo_url: "http://cdn.buzznet.com/assets/users6/beachut/default/lemon-head-cat--large-msg-1109380671-2.jpg", color: "White", blurb: "You be the Dairy Queen and I’ll be your Burger King: You treat me right, and I’ll do it your way.", owner_id: 15)
+Cat.create(name: "Cleopatra",sex: "female", photo_url: "http://cdn.buzznet.com/assets/users6/beachut/default/lemon-head-cat--large-msg-1109380671-2.jpg", color: "White", blurb: "You be the Dairy Queen and I’ll be your Burger King: You treat me right, and I’ll do it your way.", owner_id: 5)
 # chuck norris' cat
-Cat.create(name: "Walker, Texas Ranger",sex: "male", photo_url: "http://i1300.photobucket.com/albums/ag95/partycatt/artworks-000076947994-7vk63n-original_zpsb15b0921.jpg", color: "Chuck Norris Colored", blurb: "You want a roundhouse kick to face from someone wearing these pants?", owner_id: 15)
+Cat.create(name: "Walker, Texas Ranger",sex: "male", photo_url: "http://i1300.photobucket.com/albums/ag95/partycatt/artworks-000076947994-7vk63n-original_zpsb15b0921.jpg", color: "Chuck Norris Colored", blurb: "You want a roundhouse kick to face from someone wearing these pants?", owner_id: 4)
 # eminem's cat
-Cat.create(name: "Shady",sex: "female", photo_url: "https://s-media-cache-ak0.pinimg.com/236x/f0/fa/51/f0fa51b929d29f70aba2ea70cc7a58e4.jpg", color: "white", blurb: "Why am I so angry all the time?", owner_id: 15)
+Cat.create(name: "Shady",sex: "female", photo_url: "https://s-media-cache-ak0.pinimg.com/236x/f0/fa/51/f0fa51b929d29f70aba2ea70cc7a58e4.jpg", color: "white", blurb: "Why am I so angry all the time?", owner_id: 5)
 
 
 
@@ -119,7 +119,7 @@ Cat.create(name: "Shady",sex: "female", photo_url: "https://s-media-cache-ak0.pi
 
 ## cats we can log in as
 ## twitter username: @_sexy_cat, password: sexycat ## 
-Cat.create(name: "pretty sexy cat",sex: "male", photo_url: "https://reportsfromtherock.files.wordpress.com/2014/12/giphy-5.gif", color: "Mix", blurb: "Party's over.", owner_id: 10)
+Cat.create(name: "pretty sexy cat",sex: "male", photo_url: "https://reportsfromtherock.files.wordpress.com/2014/12/giphy-5.gif", color: "Mix", blurb: "Party's over.", owner_id: 1)
 ## github username: el-tigre-de-internet, password: eltigre1 ## this is mike tyson's cat
 Cat.create(name: "el tigre",sex: "male", photo_url: "http://artatm.com/wp-content/uploads/2011/07/running_tiger.jpg", color: "orange", blurb: "hey...... ", owner_id: 1)
 

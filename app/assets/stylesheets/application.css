@@ -53,11 +53,15 @@ body{
   font-family: "Varela Round", sans-serif;
 }
 
+.layout{
+margin-left: 15%;
+margin-right: 15%;
+margin-top: 10%;
+}
+
 .show-box {
   background-color: #CCEAEC;
-  width: 70%;
-  margin-left: 15%;
-  margin-top: 10%;
+  width: 100%;
   padding-bottom: 20px;
   padding-top: 20px;
   border-radius: 10%;
@@ -89,6 +93,7 @@ body{
 
 .index-list{
   display: inline-block;
+  vertical-align: top;
   background-color: #CCEAEC;
   max-width: 20%;
   height: 60%;
@@ -107,6 +112,44 @@ body{
   max-width: 50%;
   height: auto;
   max-height: 50%
+}
+
+
+.show-column {
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  background-color: #CCEAEC;
+  border-radius: 10%;
+  text-align: center;
+  padding-right: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-columns{
+  width: 100%;
+  margin-top: 10%;
+}
+
+#button{
+  display: inline-block;
+  width: 48%;
+  padding: 5%;
+  font-family: "Varela Round", sans-serif;
+  font-size: 18px;
+  color :#000;
+  background-color: #fff;
+  border: 1px solid #000;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+
+#button:hover,
+#button:active {
+  background-color: #FF6666;
+  color: #fff;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
