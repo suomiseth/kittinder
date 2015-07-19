@@ -4833,6 +4833,421 @@ Started GET "/auth/github" for ::1 at 2015-07-18 10:27:53 -0400
 
 
 Started GET "/auth/github" for ::1 at 2015-07-18 10:27:53 -0400
+<<<<<<< HEAD
+
+
+Started GET "/" for ::1 at 2015-07-18 12:36:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (2.4ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (22.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 244ms (Views: 208.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 12:36:07 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 12:36:07 -0400
+
+
+Started GET "/assets/application.self-c625885437a9d1ce9a2d93fa7862c8c4c4ec8353f8da79fde0f1c6c7d927f162.css?body=1" for ::1 at 2015-07-18 12:36:07 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:36:07 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 12:36:07 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:36:07 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 12:36:07 -0400
+
+
+Started GET "/auth/twitter" for ::1 at 2015-07-18 12:36:26 -0400
+
+
+Started GET "/auth/twitter" for ::1 at 2015-07-18 12:36:27 -0400
+
+
+Started GET "/auth/twitter/callback?oauth_token=sKF86QAAAAAAgNDyAAABTqIGID0&oauth_verifier=aj8s49Qq5ziaLuQ7NSs5mmUGjaeBAC97" for ::1 at 2015-07-18 12:36:40 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"oauth_token"=>"sKF86QAAAAAAgNDyAAABTqIGID0", "oauth_verifier"=>"aj8s49Qq5ziaLuQ7NSs5mmUGjaeBAC97", "provider"=>"twitter"}
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."name" = ? LIMIT 1[0m  [["name", "Walker, Texas Ranger"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."name" = ? LIMIT 1  [["name", "Walker, Texas Ranger"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 12:36:42 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mCat Load (0.7ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered static_pages/_form.html.erb (2.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+  [1m[35mCat Load (0.8ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 81]]
+Completed 200 OK in 53ms (Views: 48.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-18 12:36:46 -0400
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (1.1ms)[0m  [1mSELECT "owners".* FROM "owners"[0m
+  Rendered owners/index.html.erb within layouts/application (13.0ms)
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 81]]
+Completed 200 OK in 63ms (Views: 57.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/owners/41" for ::1 at 2015-07-18 12:36:54 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mOwner Load (0.2ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 41]]
+  [1m[35mCat Load (0.2ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?  [["owner_id", 41]]
+  Rendered owners/show.html.erb within layouts/application (23.9ms)
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 81]]
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/owners/42" for ::1 at 2015-07-18 12:37:00 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 42]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 42]]
+  Rendered owners/show.html.erb within layouts/application (0.9ms)
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 81]]
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/owners/43" for ::1 at 2015-07-18 12:37:05 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[36mOwner Load (0.1ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 43]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?  [["owner_id", 43]]
+  Rendered owners/show.html.erb within layouts/application (1.2ms)
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 81]]
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/owners/44" for ::1 at 2015-07-18 12:37:10 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 44]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 44]]
+  Rendered owners/show.html.erb within layouts/application (0.9ms)
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 81]]
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/owners/45" for ::1 at 2015-07-18 12:37:14 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mOwner Load (0.3ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 45]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?  [["owner_id", 45]]
+  Rendered owners/show.html.erb within layouts/application (0.9ms)
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 81]]
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/owners/46" for ::1 at 2015-07-18 12:37:17 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 46]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 46]]
+  Rendered owners/show.html.erb within layouts/application (1.1ms)
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 81]]
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/owners/47" for ::1 at 2015-07-18 12:37:24 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mOwner Load (0.1ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 47]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?  [["owner_id", 47]]
+  Rendered owners/show.html.erb within layouts/application (0.9ms)
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 81]]
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/owners/48" for ::1 at 2015-07-18 12:37:27 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 48]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 48]]
+  Rendered owners/show.html.erb within layouts/application (0.9ms)
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 81]]
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/owners/49" for ::1 at 2015-07-18 12:37:34 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mOwner Load (0.1ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 49]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?  [["owner_id", 49]]
+  Rendered owners/show.html.erb within layouts/application (0.8ms)
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 81]]
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-18 12:38:25 -0400
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.8ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (6.1ms)
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 81]]
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cats/36" for ::1 at 2015-07-18 12:38:41 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 36]]
+  [1m[36mOwner Load (0.1ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered cats/show.html.erb within layouts/application (6.0ms)
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 81]]
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/84" for ::1 at 2015-07-18 12:39:04 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"84"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 84]]
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered cats/show.html.erb within layouts/application (1.0ms)
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 81]]
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cats/82" for ::1 at 2015-07-18 12:39:14 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[35mCat Load (0.3ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 82]]
+  [1m[36mOwner Load (0.1ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered cats/show.html.erb within layouts/application (0.9ms)
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 81]]
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats/81" for ::1 at 2015-07-18 12:39:18 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 81]]
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered cats/show.html.erb within layouts/application (0.8ms)
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 81]]
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout" for ::1 at 2015-07-18 12:40:17 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 12:40:17 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (0.5ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (1.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 12:40:22 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mCat Load (0.5ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered static_pages/_form.html.erb (1.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cats" for ::1 at 2015-07-18 12:40:26 -0400
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (0.5ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-18 12:40:38 -0400
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (0.6ms)[0m  [1mSELECT "owners".* FROM "owners"[0m
+  Rendered owners/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 12:51:15 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (0.6ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (1.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-c625885437a9d1ce9a2d93fa7862c8c4c4ec8353f8da79fde0f1c6c7d927f162.css?body=1" for ::1 at 2015-07-18 12:51:15 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:51:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 12:51:15 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 12:51:15 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 12:51:15 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:51:15 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 12:51:15 -0400
+
+
+Started GET "/" for ::1 at 2015-07-18 12:51:17 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mCat Load (0.8ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered static_pages/_form.html.erb (1.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-c625885437a9d1ce9a2d93fa7862c8c4c4ec8353f8da79fde0f1c6c7d927f162.css?body=1" for ::1 at 2015-07-18 12:51:17 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 12:51:17 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:51:17 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:51:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 12:51:17 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 12:51:17 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 12:51:17 -0400
+
+
+Started GET "/" for ::1 at 2015-07-18 12:51:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (2.3ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (21.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 242ms (Views: 204.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 12:51:32 -0400
+
+
+Started GET "/assets/application.self-c625885437a9d1ce9a2d93fa7862c8c4c4ec8353f8da79fde0f1c6c7d927f162.css?body=1" for ::1 at 2015-07-18 12:51:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 12:51:32 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 12:51:32 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:51:32 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:51:32 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 12:51:32 -0400
+
+
+Started GET "/" for ::1 at 2015-07-18 12:51:35 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mCat Load (1.4ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered static_pages/_form.html.erb (1.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.self-c625885437a9d1ce9a2d93fa7862c8c4c4ec8353f8da79fde0f1c6c7d927f162.css?body=1" for ::1 at 2015-07-18 12:51:35 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 12:51:35 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:51:35 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 12:51:35 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:51:35 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 12:51:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 12:51:35 -0400
+
+
+Started GET "/" for ::1 at 2015-07-18 12:52:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (0.8ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (17.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 217ms (Views: 184.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-c625885437a9d1ce9a2d93fa7862c8c4c4ec8353f8da79fde0f1c6c7d927f162.css?body=1" for ::1 at 2015-07-18 12:52:27 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 12:52:27 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 12:52:27 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 12:52:27 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:52:27 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 12:52:27 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:52:27 -0400
+
+
+Started GET "/" for ::1 at 2015-07-18 12:55:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (0.6ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (16.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 204ms (Views: 174.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-c625885437a9d1ce9a2d93fa7862c8c4c4ec8353f8da79fde0f1c6c7d927f162.css?body=1" for ::1 at 2015-07-18 12:55:21 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 12:55:21 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 12:55:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 12:55:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 12:55:21 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:55:21 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:55:21 -0400
+=======
 =======
   [1m[35m (0.7ms)[0m  commit transaction
   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
@@ -8645,6 +9060,574 @@ Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dd
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 12:51:14 -0400
+<<<<<<< HEAD
+>>>>>>> 269666da333fca600e57cdb7f24040c3bbf6a54d
+
+
+Started GET "/" for ::1 at 2015-07-18 12:57:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (0.6ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 195ms (Views: 164.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-c625885437a9d1ce9a2d93fa7862c8c4c4ec8353f8da79fde0f1c6c7d927f162.css?body=1" for ::1 at 2015-07-18 12:57:00 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 12:57:00 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 12:57:00 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:57:00 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 12:57:00 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 12:57:00 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 12:57:00 -0400
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1[0m
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1
+  [1m[36mMatch Load (1.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 1], ["match_type", "t"]]
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mMatch Load (0.2ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?  [["actor_id", 1], ["match_type", "t"]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1[0m
+  [1m[35mMatch Load (0.2ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?  [["receiver_id", 1], ["match_type", "t"]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mMatch Load (0.2ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 1], ["match_type", "t"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."name" = ? LIMIT 1[0m  [["name", "Brad Kitt"]]
+  [1m[35mMatch Load (0.7ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?  [["receiver_id", 1], ["match_type", "t"]]
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mMatch Load (0.1ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 1], ["match_type", "t"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mMatch Load (0.3ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?  [["actor_id", 1], ["match_type", "f"]]
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."name" = ? LIMIT 1[0m  [["name", "Walker, Texas Ranger"]]
+  [1m[35mMatch Load (0.2ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?  [["receiver_id", 81], ["match_type", "t"]]
+  [1m[36mMatch Load (0.1ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 81], ["match_type", "t"]]
+  [1m[35mMatch Load (0.1ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?  [["actor_id", 81], ["match_type", "f"]]
+  [1m[36mMatch Load (0.2ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 81], ["match_type", "t"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "crazy cat lady 1"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:37:30.036283"], ["updated_at", "2015-07-18 17:37:30.036283"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "crazy cat lady 2"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:37:30.041440"], ["updated_at", "2015-07-18 17:37:30.041440"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "crazy cat lady 3"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:37:30.043496"], ["updated_at", "2015-07-18 17:37:30.043496"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "crazy cat lady 4"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:37:30.045450"], ["updated_at", "2015-07-18 17:37:30.045450"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "crazy cat lady 5"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:37:30.047511"], ["updated_at", "2015-07-18 17:37:30.047511"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "crazy cat lady 6"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:37:30.049662"], ["updated_at", "2015-07-18 17:37:30.049662"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "crazy cat lady 7"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:37:30.052872"], ["updated_at", "2015-07-18 17:37:30.052872"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "crazy cat lady 8"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:37:30.055686"], ["updated_at", "2015-07-18 17:37:30.055686"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "crazy cat lady 9"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:37:30.058018"], ["updated_at", "2015-07-18 17:37:30.058018"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "crazy cat lady 10"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:37:30.060856"], ["updated_at", "2015-07-18 17:37:30.060856"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chuck Norris"], ["state", "No one knows"], ["city", "No one knows"], ["photo_url", "http://cdn.playbuzz.com/cdn/cb7190c0-906c-4bfc-8725-2d308c40f60a/e0949af2-7ba9-4fe3-8d95-df5d15af0661.jpg"], ["saying", "Death once had a near-Chuck-Norris experience."], ["created_at", "2015-07-18 17:37:30.063689"], ["updated_at", "2015-07-18 17:37:30.063689"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Oprah Winfrey"], ["state", "CA"], ["city", "LA"], ["photo_url", "http://38.media.tumblr.com/tumblr_lifw7mP0761qz7o2oo1_400.gif"], ["saying", "You get a cat... and you get a cat.... and you..."], ["created_at", "2015-07-18 17:37:30.066237"], ["updated_at", "2015-07-18 17:37:30.066237"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jay-Z"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://a3-images.myspacecdn.com/images03/35/a03b92e0338b4b229ae5e3cb379a2907/300x300.jpg"], ["saying", "My cat is better than Nas' cat"], ["created_at", "2015-07-18 17:37:30.069029"], ["updated_at", "2015-07-18 17:37:30.069029"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Michelle Obama"], ["state", "MD"], ["city", "DC"], ["photo_url", "http://i.ytimg.com/vi/mbICDkQb46g/maxresdefault.jpg"], ["saying", ""], ["created_at", "2015-07-18 17:37:30.071809"], ["updated_at", "2015-07-18 17:37:30.071809"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mike Tyson"], ["state", "NV"], ["city", "Las Vegas"], ["photo_url", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSkRA3zXLwqRyjtTNOR1amvjni274ds6jEvT-JPc3KdqiTATw_Wwg"], ["saying", "I just want to conquer people and their souls."], ["created_at", "2015-07-18 17:37:30.074487"], ["updated_at", "2015-07-18 17:37:30.074487"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Neo"], ["state", "Zion"], ["city", "Zion"], ["photo_url", "http://scifidramaqueen.files.wordpress.com/2011/01/the-matrix-neo.jpg"], ["saying", "There is no spoon"], ["created_at", "2015-07-18 17:37:30.077172"], ["updated_at", "2015-07-18 17:37:30.077172"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marshall Mathers"], ["state", "MI"], ["city", "D-town"], ["photo_url", "https://s-media-cache-ak0.pinimg.com/236x/9b/66/43/9b6643bc6656fcbbed52410c2f010d0b.jpg"], ["saying", "Why am I so angry all the time?"], ["created_at", "2015-07-18 17:37:30.079459"], ["updated_at", "2015-07-18 17:37:30.079459"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "This Weird Guy"], ["state", "AL"], ["city", "Cullman"], ["photo_url", "http://i.imgur.com/tFWOl.jpg"], ["saying", "What?"], ["created_at", "2015-07-18 17:37:30.081789"], ["updated_at", "2015-07-18 17:37:30.081789"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "I like turtles"], ["state", "I like turtles"], ["city", "I like turtles"], ["photo_url", "http://38.media.tumblr.com/tumblr_lv4mlsbfCc1qkhtxx.png"], ["saying", "I like tutles"], ["created_at", "2015-07-18 17:37:30.084283"], ["updated_at", "2015-07-18 17:37:30.084283"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Brad Kitt"], ["sex", "male"], ["photo_url", "http://wallpapersinhq.com/images/medium/a-cool_cat_with_the_glasses-1471504.jpg"], ["color", "gray"], ["blurb", "I'd like to design something like a city or a museum. I want to do something hands on rather than just play golf which is the sport of the religious right."], ["owner_id", 1], ["created_at", "2015-07-18 17:37:30.117133"], ["updated_at", "2015-07-18 17:37:30.117133"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Catalie Portman"], ["sex", "female"], ["photo_url", "http://s3.favim.com/orig/47/cat-cute-kitty-Favim.com-433645.jpg"], ["color", "Calico"], ["blurb", "Cute is when a person's personality shines through their looks. Like in the way they walk, every time you see them you just want to run up and hug them."], ["owner_id", 2], ["created_at", "2015-07-18 17:37:30.121221"], ["updated_at", "2015-07-18 17:37:30.121221"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lily Pad"], ["sex", "female"], ["photo_url", "https://scontent-ord1-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/p206x206/10487253_10153118466767796_8159052273860518180_n.jpg?oh=720710c2587d74fae645ec3dcf358598&oe=561E8135"], ["color", "Calico"], ["blurb", "Lilies may kill you but I will love you forever."], ["owner_id", 3], ["created_at", "2015-07-18 17:37:30.125171"], ["updated_at", "2015-07-18 17:37:30.125171"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Max"], ["sex", "male"], ["photo_url", "/images/cat.jpg"], ["color", "orange"], ["blurb", "I like wacking other cats and my favorite drink is water"], ["owner_id", 3], ["created_at", "2015-07-18 17:37:30.129742"], ["updated_at", "2015-07-18 17:37:30.129742"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pumpkin"], ["sex", "female"], ["photo_url", "http://farm3.static.flickr.com/2177/1808395977_5c6a1ea382.jpg"], ["color", "orange"], ["blurb", "Pumpkin Pie!"], ["owner_id", 4], ["created_at", "2015-07-18 17:37:30.134307"], ["updated_at", "2015-07-18 17:37:30.134307"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cupcakes"], ["sex", "female"], ["photo_url", "https://41.media.tumblr.com/c1126344e2d4971dc734c177c59b64ca/tumblr_myx82s2Lh51shf8zxo1_500.jpg"], ["color", "white/gray"], ["blurb", "I love cupcakes. Get me a cupcake."], ["owner_id", 5], ["created_at", "2015-07-18 17:37:30.138593"], ["updated_at", "2015-07-18 17:37:30.138593"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Doctor Mew"], ["sex", "male"], ["photo_url", "http://4everstatic.com/pictures/674xX/fun/animals/doctor,-cat-213520.jpg"], ["color", "brown"], ["blurb", "Can I take your temperature? Because you're looking hot today."], ["owner_id", 6], ["created_at", "2015-07-18 17:37:30.142418"], ["updated_at", "2015-07-18 17:37:30.142418"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kit Romney"], ["sex", "male"], ["photo_url", "http://stylonica.com/wp-content/uploads/2014/03/cute-cat-picture-wallpaper.jpg"], ["color", "white/gray"], ["blurb", "Global warming obviously doesn't exist - YOU'RE the one heating up the place!"], ["owner_id", 7], ["created_at", "2015-07-18 17:37:30.146320"], ["updated_at", "2015-07-18 17:37:30.146320"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Robert Kattison"], ["sex", "male"], ["photo_url", "http://f.tqn.com/y/petsupplies/1/S/Y/1/-/-/c5.jpg"], ["color", "gray/black"], ["blurb", "Twilight? No.. haven’t heard of it"], ["owner_id", 8], ["created_at", "2015-07-18 17:37:30.149718"], ["updated_at", "2015-07-18 17:37:30.149718"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.4ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marshmallow"], ["sex", "male"], ["photo_url", "http://in.bookmyshow.com/entertainment/wp-content/uploads/image/1do%20not%20open-curiosity%20killed%20the%20cat/this%20cat%20that%20reminds%20you%20of%20a%20marshmallow.jpg"], ["color", "white/orange"], ["blurb", "We're like hot chocolate and marshmallows. You're hot and I want to be on top of you."], ["owner_id", 9], ["created_at", "2015-07-18 17:37:30.153066"], ["updated_at", "2015-07-18 17:37:30.153066"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bubz"], ["sex", "male"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-lil-bub-2.jpg"], ["color", "gray"], ["blurb", "Blub blub"], ["owner_id", 10], ["created_at", "2015-07-18 17:37:30.156341"], ["updated_at", "2015-07-18 17:37:30.156341"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Grumpy Cat"], ["sex", "male"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-grumpy-cat-4.jpg"], ["color", "white/brown"], ["blurb", "I like long walks, especially when they are taken by poeople who annoy me."], ["owner_id", 11], ["created_at", "2015-07-18 17:37:30.159464"], ["updated_at", "2015-07-18 17:37:30.159464"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pusheen"], ["sex", "male"], ["photo_url", "http://38.media.tumblr.com/tumblr_lkqkraG6741qhy6c9o1_400.gif"], ["color", "gray"], ["blurb", "I like to eat, sleep, and eat some more."], ["owner_id", 12], ["created_at", "2015-07-18 17:37:30.162312"], ["updated_at", "2015-07-18 17:37:30.162312"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Maru"], ["sex", "female"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/famous-internet-cats-221.jpg"], ["color", "white/gray/brown"], ["blurb", "I am the master of boxes."], ["owner_id", 13], ["created_at", "2015-07-18 17:37:30.165181"], ["updated_at", "2015-07-18 17:37:30.165181"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Garfield"], ["sex", "male"], ["photo_url", "https://outnow.ch/Media/Movies/Bilder/2006/Garfield2/movie.ws/09.jpg"], ["color", "orange"], ["blurb", "Eat every meal as though it were your last."], ["owner_id", 14], ["created_at", "2015-07-18 17:37:30.168057"], ["updated_at", "2015-07-18 17:37:30.168057"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Shironeko"], ["sex", "female"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/shironeko-happy-cat-62.jpg"], ["color", "white"], ["blurb", "I like to sleep."], ["owner_id", 15], ["created_at", "2015-07-18 17:37:30.171434"], ["updated_at", "2015-07-18 17:37:30.171434"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hamilton"], ["sex", "male"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-hamilton-11__605.jpg"], ["color", "white/gray"], ["blurb", "Enter coffee shop – stay all day"], ["owner_id", 6], ["created_at", "2015-07-18 17:37:30.174593"], ["updated_at", "2015-07-18 17:37:30.174593"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.4ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nala"], ["sex", "female"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/famous-internet-cats-2__605.jpg"], ["color", "gray"], ["blurb", "AHHHHHHHHHH!"], ["owner_id", 7], ["created_at", "2015-07-18 17:37:30.177642"], ["updated_at", "2015-07-18 17:37:30.177642"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Banye"], ["sex", "female"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-banye-omg-cat-1__605.jpg"], ["color", "white/gray"], ["blurb", "OMG"], ["owner_id", 12], ["created_at", "2015-07-18 17:37:30.180593"], ["updated_at", "2015-07-18 17:37:30.180593"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kitler"], ["sex", "male"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/kitler-1__605.jpg"], ["color", "White"], ["blurb", "Struggle is the father of all things. It is not by the principles of humanity that man lives or is able to preserve himself above the animal world, but solely by means of the most brutal struggle."], ["owner_id", 14], ["created_at", "2015-07-18 17:37:30.183666"], ["updated_at", "2015-07-18 17:37:30.183666"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cleopatra"], ["sex", "female"], ["photo_url", "http://cdn.buzznet.com/assets/users6/beachut/default/lemon-head-cat--large-msg-1109380671-2.jpg"], ["color", "White"], ["blurb", "You be the Dairy Queen and I’ll be your Burger King: You treat me right, and I’ll do it your way."], ["owner_id", 15], ["created_at", "2015-07-18 17:37:30.186614"], ["updated_at", "2015-07-18 17:37:30.186614"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Walker, Texas Ranger"], ["sex", "male"], ["photo_url", "http://i1300.photobucket.com/albums/ag95/partycatt/artworks-000076947994-7vk63n-original_zpsb15b0921.jpg"], ["color", "Chuck Norris Colored"], ["blurb", "You want a roundhouse kick to face from someone wearing these pants?"], ["owner_id", 15], ["created_at", "2015-07-18 17:37:30.189816"], ["updated_at", "2015-07-18 17:37:30.189816"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Shady"], ["sex", "female"], ["photo_url", "https://s-media-cache-ak0.pinimg.com/236x/f0/fa/51/f0fa51b929d29f70aba2ea70cc7a58e4.jpg"], ["color", "white"], ["blurb", "Why am I so angry all the time?"], ["owner_id", 15], ["created_at", "2015-07-18 17:37:30.192692"], ["updated_at", "2015-07-18 17:37:30.192692"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "pretty sexy cat"], ["sex", "male"], ["photo_url", "https://reportsfromtherock.files.wordpress.com/2014/12/giphy-5.gif"], ["color", "Mix"], ["blurb", "Party's over."], ["owner_id", 10], ["created_at", "2015-07-18 17:37:30.206402"], ["updated_at", "2015-07-18 17:37:30.206402"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."name" = ? LIMIT 1[0m  [["name", "Mike Tyson"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "crazy cat lady 1"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:38:00.763402"], ["updated_at", "2015-07-18 17:38:00.763402"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "crazy cat lady 2"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:38:00.770645"], ["updated_at", "2015-07-18 17:38:00.770645"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "crazy cat lady 3"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:38:00.773440"], ["updated_at", "2015-07-18 17:38:00.773440"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "crazy cat lady 4"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:38:00.776098"], ["updated_at", "2015-07-18 17:38:00.776098"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "crazy cat lady 5"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:38:00.779123"], ["updated_at", "2015-07-18 17:38:00.779123"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "crazy cat lady 6"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:38:00.781866"], ["updated_at", "2015-07-18 17:38:00.781866"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "crazy cat lady 7"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:38:00.784642"], ["updated_at", "2015-07-18 17:38:00.784642"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "crazy cat lady 8"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:38:00.787126"], ["updated_at", "2015-07-18 17:38:00.787126"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "crazy cat lady 9"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:38:00.789735"], ["updated_at", "2015-07-18 17:38:00.789735"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "crazy cat lady 10"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://hellokathyrawr.files.wordpress.com/2015/04/ccl.jpg"], ["created_at", "2015-07-18 17:38:00.793180"], ["updated_at", "2015-07-18 17:38:00.793180"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chuck Norris"], ["state", "No one knows"], ["city", "No one knows"], ["photo_url", "http://cdn.playbuzz.com/cdn/cb7190c0-906c-4bfc-8725-2d308c40f60a/e0949af2-7ba9-4fe3-8d95-df5d15af0661.jpg"], ["saying", "Death once had a near-Chuck-Norris experience."], ["created_at", "2015-07-18 17:38:00.795763"], ["updated_at", "2015-07-18 17:38:00.795763"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Oprah Winfrey"], ["state", "CA"], ["city", "LA"], ["photo_url", "http://38.media.tumblr.com/tumblr_lifw7mP0761qz7o2oo1_400.gif"], ["saying", "You get a cat... and you get a cat.... and you..."], ["created_at", "2015-07-18 17:38:00.798826"], ["updated_at", "2015-07-18 17:38:00.798826"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jay-Z"], ["state", "NY"], ["city", "NYC"], ["photo_url", "https://a3-images.myspacecdn.com/images03/35/a03b92e0338b4b229ae5e3cb379a2907/300x300.jpg"], ["saying", "My cat is better than Nas' cat"], ["created_at", "2015-07-18 17:38:00.801836"], ["updated_at", "2015-07-18 17:38:00.801836"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Michelle Obama"], ["state", "MD"], ["city", "DC"], ["photo_url", "http://i.ytimg.com/vi/mbICDkQb46g/maxresdefault.jpg"], ["saying", ""], ["created_at", "2015-07-18 17:38:00.804430"], ["updated_at", "2015-07-18 17:38:00.804430"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mike Tyson"], ["state", "NV"], ["city", "Las Vegas"], ["photo_url", "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSkRA3zXLwqRyjtTNOR1amvjni274ds6jEvT-JPc3KdqiTATw_Wwg"], ["saying", "I just want to conquer people and their souls."], ["created_at", "2015-07-18 17:38:00.806950"], ["updated_at", "2015-07-18 17:38:00.806950"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Neo"], ["state", "Zion"], ["city", "Zion"], ["photo_url", "http://scifidramaqueen.files.wordpress.com/2011/01/the-matrix-neo.jpg"], ["saying", "There is no spoon"], ["created_at", "2015-07-18 17:38:00.809429"], ["updated_at", "2015-07-18 17:38:00.809429"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marshall Mathers"], ["state", "MI"], ["city", "D-town"], ["photo_url", "https://s-media-cache-ak0.pinimg.com/236x/9b/66/43/9b6643bc6656fcbbed52410c2f010d0b.jpg"], ["saying", "Why am I so angry all the time?"], ["created_at", "2015-07-18 17:38:00.811624"], ["updated_at", "2015-07-18 17:38:00.811624"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "This Weird Guy"], ["state", "AL"], ["city", "Cullman"], ["photo_url", "http://i.imgur.com/tFWOl.jpg"], ["saying", "What?"], ["created_at", "2015-07-18 17:38:00.814234"], ["updated_at", "2015-07-18 17:38:00.814234"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "owners" ("name", "state", "city", "photo_url", "saying", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "I like turtles"], ["state", "I like turtles"], ["city", "I like turtles"], ["photo_url", "http://38.media.tumblr.com/tumblr_lv4mlsbfCc1qkhtxx.png"], ["saying", "I like tutles"], ["created_at", "2015-07-18 17:38:00.816822"], ["updated_at", "2015-07-18 17:38:00.816822"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.3ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Brad Kitt"], ["sex", "male"], ["photo_url", "http://wallpapersinhq.com/images/medium/a-cool_cat_with_the_glasses-1471504.jpg"], ["color", "gray"], ["blurb", "I'd like to design something like a city or a museum. I want to do something hands on rather than just play golf which is the sport of the religious right."], ["owner_id", 1], ["created_at", "2015-07-18 17:38:00.851910"], ["updated_at", "2015-07-18 17:38:00.851910"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Catalie Portman"], ["sex", "female"], ["photo_url", "http://s3.favim.com/orig/47/cat-cute-kitty-Favim.com-433645.jpg"], ["color", "Calico"], ["blurb", "Cute is when a person's personality shines through their looks. Like in the way they walk, every time you see them you just want to run up and hug them."], ["owner_id", 2], ["created_at", "2015-07-18 17:38:00.857167"], ["updated_at", "2015-07-18 17:38:00.857167"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lily Pad"], ["sex", "female"], ["photo_url", "https://scontent-ord1-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/p206x206/10487253_10153118466767796_8159052273860518180_n.jpg?oh=720710c2587d74fae645ec3dcf358598&oe=561E8135"], ["color", "Calico"], ["blurb", "Lilies may kill you but I will love you forever."], ["owner_id", 3], ["created_at", "2015-07-18 17:38:00.860405"], ["updated_at", "2015-07-18 17:38:00.860405"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Max"], ["sex", "male"], ["photo_url", "/images/cat.jpg"], ["color", "orange"], ["blurb", "I like wacking other cats and my favorite drink is water"], ["owner_id", 3], ["created_at", "2015-07-18 17:38:00.864142"], ["updated_at", "2015-07-18 17:38:00.864142"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.6ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pumpkin"], ["sex", "female"], ["photo_url", "http://farm3.static.flickr.com/2177/1808395977_5c6a1ea382.jpg"], ["color", "orange"], ["blurb", "Pumpkin Pie!"], ["owner_id", 4], ["created_at", "2015-07-18 17:38:00.867925"], ["updated_at", "2015-07-18 17:38:00.867925"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cupcakes"], ["sex", "female"], ["photo_url", "https://41.media.tumblr.com/c1126344e2d4971dc734c177c59b64ca/tumblr_myx82s2Lh51shf8zxo1_500.jpg"], ["color", "white/gray"], ["blurb", "I love cupcakes. Get me a cupcake."], ["owner_id", 5], ["created_at", "2015-07-18 17:38:00.871587"], ["updated_at", "2015-07-18 17:38:00.871587"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Doctor Mew"], ["sex", "male"], ["photo_url", "http://4everstatic.com/pictures/674xX/fun/animals/doctor,-cat-213520.jpg"], ["color", "brown"], ["blurb", "Can I take your temperature? Because you're looking hot today."], ["owner_id", 6], ["created_at", "2015-07-18 17:38:00.875055"], ["updated_at", "2015-07-18 17:38:00.875055"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kit Romney"], ["sex", "male"], ["photo_url", "http://stylonica.com/wp-content/uploads/2014/03/cute-cat-picture-wallpaper.jpg"], ["color", "white/gray"], ["blurb", "Global warming obviously doesn't exist - YOU'RE the one heating up the place!"], ["owner_id", 7], ["created_at", "2015-07-18 17:38:00.878992"], ["updated_at", "2015-07-18 17:38:00.878992"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Robert Kattison"], ["sex", "male"], ["photo_url", "http://f.tqn.com/y/petsupplies/1/S/Y/1/-/-/c5.jpg"], ["color", "gray/black"], ["blurb", "Twilight? No.. haven’t heard of it"], ["owner_id", 8], ["created_at", "2015-07-18 17:38:00.882504"], ["updated_at", "2015-07-18 17:38:00.882504"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marshmallow"], ["sex", "male"], ["photo_url", "http://in.bookmyshow.com/entertainment/wp-content/uploads/image/1do%20not%20open-curiosity%20killed%20the%20cat/this%20cat%20that%20reminds%20you%20of%20a%20marshmallow.jpg"], ["color", "white/orange"], ["blurb", "We're like hot chocolate and marshmallows. You're hot and I want to be on top of you."], ["owner_id", 9], ["created_at", "2015-07-18 17:38:00.885814"], ["updated_at", "2015-07-18 17:38:00.885814"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bubz"], ["sex", "male"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-lil-bub-2.jpg"], ["color", "gray"], ["blurb", "Blub blub"], ["owner_id", 10], ["created_at", "2015-07-18 17:38:00.889187"], ["updated_at", "2015-07-18 17:38:00.889187"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Grumpy Cat"], ["sex", "male"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-grumpy-cat-4.jpg"], ["color", "white/brown"], ["blurb", "I like long walks, especially when they are taken by poeople who annoy me."], ["owner_id", 11], ["created_at", "2015-07-18 17:38:00.892359"], ["updated_at", "2015-07-18 17:38:00.892359"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pusheen"], ["sex", "male"], ["photo_url", "http://38.media.tumblr.com/tumblr_lkqkraG6741qhy6c9o1_400.gif"], ["color", "gray"], ["blurb", "I like to eat, sleep, and eat some more."], ["owner_id", 12], ["created_at", "2015-07-18 17:38:00.895547"], ["updated_at", "2015-07-18 17:38:00.895547"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Maru"], ["sex", "female"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/famous-internet-cats-221.jpg"], ["color", "white/gray/brown"], ["blurb", "I am the master of boxes."], ["owner_id", 13], ["created_at", "2015-07-18 17:38:00.898956"], ["updated_at", "2015-07-18 17:38:00.898956"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.3ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Garfield"], ["sex", "male"], ["photo_url", "https://outnow.ch/Media/Movies/Bilder/2006/Garfield2/movie.ws/09.jpg"], ["color", "orange"], ["blurb", "Eat every meal as though it were your last."], ["owner_id", 14], ["created_at", "2015-07-18 17:38:00.902604"], ["updated_at", "2015-07-18 17:38:00.902604"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Shironeko"], ["sex", "female"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/shironeko-happy-cat-62.jpg"], ["color", "white"], ["blurb", "I like to sleep."], ["owner_id", 15], ["created_at", "2015-07-18 17:38:00.905836"], ["updated_at", "2015-07-18 17:38:00.905836"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hamilton"], ["sex", "male"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-hamilton-11__605.jpg"], ["color", "white/gray"], ["blurb", "Enter coffee shop – stay all day"], ["owner_id", 6], ["created_at", "2015-07-18 17:38:00.908937"], ["updated_at", "2015-07-18 17:38:00.908937"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nala"], ["sex", "female"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/famous-internet-cats-2__605.jpg"], ["color", "gray"], ["blurb", "AHHHHHHHHHH!"], ["owner_id", 7], ["created_at", "2015-07-18 17:38:00.912184"], ["updated_at", "2015-07-18 17:38:00.912184"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Banye"], ["sex", "female"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/most-popular-cats-banye-omg-cat-1__605.jpg"], ["color", "white/gray"], ["blurb", "OMG"], ["owner_id", 12], ["created_at", "2015-07-18 17:38:00.915156"], ["updated_at", "2015-07-18 17:38:00.915156"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kitler"], ["sex", "male"], ["photo_url", "http://static.boredpanda.com/blog/wp-content/uploads/2014/11/kitler-1__605.jpg"], ["color", "White"], ["blurb", "Struggle is the father of all things. It is not by the principles of humanity that man lives or is able to preserve himself above the animal world, but solely by means of the most brutal struggle."], ["owner_id", 14], ["created_at", "2015-07-18 17:38:00.918223"], ["updated_at", "2015-07-18 17:38:00.918223"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cleopatra"], ["sex", "female"], ["photo_url", "http://cdn.buzznet.com/assets/users6/beachut/default/lemon-head-cat--large-msg-1109380671-2.jpg"], ["color", "White"], ["blurb", "You be the Dairy Queen and I’ll be your Burger King: You treat me right, and I’ll do it your way."], ["owner_id", 15], ["created_at", "2015-07-18 17:38:00.921976"], ["updated_at", "2015-07-18 17:38:00.921976"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Walker, Texas Ranger"], ["sex", "male"], ["photo_url", "http://i1300.photobucket.com/albums/ag95/partycatt/artworks-000076947994-7vk63n-original_zpsb15b0921.jpg"], ["color", "Chuck Norris Colored"], ["blurb", "You want a roundhouse kick to face from someone wearing these pants?"], ["owner_id", 15], ["created_at", "2015-07-18 17:38:00.925087"], ["updated_at", "2015-07-18 17:38:00.925087"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Shady"], ["sex", "female"], ["photo_url", "https://s-media-cache-ak0.pinimg.com/236x/f0/fa/51/f0fa51b929d29f70aba2ea70cc7a58e4.jpg"], ["color", "white"], ["blurb", "Why am I so angry all the time?"], ["owner_id", 15], ["created_at", "2015-07-18 17:38:00.928330"], ["updated_at", "2015-07-18 17:38:00.928330"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "sex", "photo_url", "color", "blurb", "owner_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "pretty sexy cat"], ["sex", "male"], ["photo_url", "https://reportsfromtherock.files.wordpress.com/2014/12/giphy-5.gif"], ["color", "Mix"], ["blurb", "Party's over."], ["owner_id", 10], ["created_at", "2015-07-18 17:38:00.942266"], ["updated_at", "2015-07-18 17:38:00.942266"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."name" = ? LIMIT 1[0m  [["name", "Mike Tyson"]]
+
+
+Started GET "/" for ::1 at 2015-07-18 13:58:35 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[36mCat Load (1.0ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered static_pages/_form.html.erb (0.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-c625885437a9d1ce9a2d93fa7862c8c4c4ec8353f8da79fde0f1c6c7d927f162.css?body=1" for ::1 at 2015-07-18 13:58:35 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 13:58:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 13:58:35 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 13:58:35 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 13:58:35 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 13:58:35 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 13:58:35 -0400
+
+
+Started GET "/cats" for ::1 at 2015-07-18 13:58:41 -0400
+Processing by CatsController#index as HTML
+  [1m[35mCat Load (1.7ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered cats/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cats/2" for ::1 at 2015-07-18 13:58:43 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOwner Load (0.2ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mMatch Load (0.2ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 2], ["match_type", "t"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMatch Load (0.1ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?  [["actor_id", 2], ["match_type", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 2], ["match_type", true]]
+  [1m[35mMatch Load (0.1ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?  [["actor_id", 2], ["match_type", "f"]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered cats/show.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 81ms (Views: 68.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cats/2" for ::1 at 2015-07-18 14:00:52 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOwner Load (0.1ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mMatch Load (0.1ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?[0m  [["receiver_id", 2], ["match_type", "t"]]
+  [1m[35mCat Load (0.1ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMatch Load (0.1ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?  [["actor_id", 2], ["match_type", "t"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 2], ["match_type", true]]
+  [1m[35mMatch Load (0.1ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?  [["actor_id", 2], ["match_type", "f"]]
+  [1m[36mCat Load (0.1ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 9]]
+  Rendered cats/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-c625885437a9d1ce9a2d93fa7862c8c4c4ec8353f8da79fde0f1c6c7d927f162.css?body=1" for ::1 at 2015-07-18 14:00:53 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-18 14:00:53 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-18 14:00:53 -0400
+
+
+Started GET "/assets/actions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 14:00:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 14:00:53 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-07-18 14:00:53 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-18 14:00:53 -0400
+
+
+Started GET "/cats" for ::1 at 2015-07-18 14:02:08 -0400
+Processing by CatsController#index as HTML
+  [1m[36mCat Load (0.8ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered cats/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cats/59" for ::1 at 2015-07-18 16:04:25 -0400
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"59"}
+  [1m[35mCat Load (0.2ms)[0m  SELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1  [["id", 59]]
+  [1m[36mOwner Load (0.2ms)[0m  [1mSELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mMatch Load (0.2ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."receiver_id" = ? AND "matches"."match_type" = ?  [["receiver_id", 59], ["match_type", "t"]]
+  [1m[36mMatch Load (0.1ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 59], ["match_type", "t"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?  [["actor_id", 59], ["match_type", true]]
+  [1m[36mMatch Load (0.1ms)[0m  [1mSELECT "matches".* FROM "matches" WHERE "matches"."actor_id" = ? AND "matches"."match_type" = ?[0m  [["actor_id", 59], ["match_type", "f"]]
+  Rendered cats/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.8ms)
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats"  ORDER BY "cats"."id" ASC LIMIT 1[0m
+
+
+Started GET "/" for ::1 at 2015-07-18 17:56:21 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (2.5ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (2.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (7.9ms)
+  [1m[36mCat Load (0.2ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 15]]
+Completed 200 OK in 101ms (Views: 82.6ms | ActiveRecord: 2.7ms)
+=======
 
 
 Started GET "/cats/1" for ::1 at 2015-07-18 12:56:42 -0400
@@ -45389,6 +46372,7 @@ Processing by CatsController#show as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = ? LIMIT 1[0m  [["id", 9]]
   Rendered cats/show.html.erb within layouts/application (24.8ms)
 Completed 200 OK in 72ms (Views: 68.0ms | ActiveRecord: 1.2ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for ::1 at 2015-07-18 19:45:31 -0400
@@ -45804,3 +46788,6 @@ Processing by OwnersController#show as HTML
   [1m[36mCat Load (0.6ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 1]]
   Rendered owners/show.html.erb within layouts/application (22.1ms)
 Completed 200 OK in 121ms (Views: 111.9ms | ActiveRecord: 1.5ms)
+=======
+>>>>>>> 3226621c48306458d9e94d9b71496d7e731ded37
+>>>>>>> 93ae6d208d7531c7b2369807bc3afe803dfc99f1

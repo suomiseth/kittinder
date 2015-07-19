@@ -3,7 +3,7 @@ class Cat < ActiveRecord::Base
   has_many :matches_as_actor, :class_name => "Match", :foreign_key => :actor_id
   has_many :matches_as_receiver, :class_name => "Match", :foreign_key => :receiver_id
 
-  validates_presence_of :owner
+  validates_presence_of :owner #no strays allowed
 
 
   def self.find_or_create_from_auth_hash(auth_hash)

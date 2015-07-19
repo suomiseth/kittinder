@@ -6,6 +6,7 @@
 
 body{
   font-family: "Varela Round", sans-serif;
+  background-image: url("catlove.jpg");
 }
 .fixed-nav-bar {
   position: fixed;
