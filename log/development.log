@@ -45773,3 +45773,34 @@ Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dd
 
 
 Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-18 19:55:35 -0400
+
+
+Started POST "/matches" for ::1 at 2015-07-18 19:56:25 -0400
+Processing by MatchesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u2sFNA3vr6CRogI4Y1gzU8adNDADq/MFvQOTiW9kzKjcGlta+iGwyYNxDlx/I5oRkmOSjiGeIRCMQKDos5bMig==", "receiver_id"=>"13", "commit"=>"No, Thanks"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-18 19:56:25 -0400
+Processing by StaticPagesController#home as HTML
+  [1m[35mCat Load (0.3ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered static_pages/_form.html.erb (0.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/owners" for ::1 at 2015-07-18 20:21:46 -0400
+Processing by OwnersController#index as HTML
+  [1m[36mOwner Load (1.3ms)[0m  [1mSELECT "owners".* FROM "owners"[0m
+  Rendered owners/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 97ms (Views: 87.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/owners/1" for ::1 at 2015-07-18 20:22:32 -0400
+Processing by OwnersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOwner Load (0.9ms)[0m  SELECT  "owners".* FROM "owners" WHERE "owners"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCat Load (0.6ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE "cats"."owner_id" = ?[0m  [["owner_id", 1]]
+  Rendered owners/show.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 121ms (Views: 111.9ms | ActiveRecord: 1.5ms)
