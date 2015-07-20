@@ -85,7 +85,16 @@ margin-top: 9%;
   padding-top: 20px;
   border-radius: 10%;
   text-align: center;
+
 }
+
+div.show-box{
+  background-color: rgba(255,255,255, 0.7);
+}
+
+/*div.show-box p{
+  color: #000000;
+}*/
 
 .white{
   color: white;
@@ -96,9 +105,9 @@ margin-top: 9%;
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  max-width: 50%;
+  max-width: 70%;
   height: auto;
-  max-height: 50%;
+  max-height: 70%;
 }
 
 .show-box li{
@@ -142,6 +151,8 @@ margin-top: 9%;
   height: auto;
   max-height: 50%
 }
+
+
 
 .show-box img{
   display: block;
