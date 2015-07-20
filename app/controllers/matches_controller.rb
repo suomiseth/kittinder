@@ -2,13 +2,13 @@ class MatchesController < ApplicationController
 # before_action :set_user
 
   def create
-    if params[:commit] == 'Yes'
+    if params[:commit] == 'Yes, Please'
       @match = Match.new
       @match.match_type = true
       @match.actor_id = session[:cat_id] 
       @match.receiver_id  = params[:receiver_id]
       @match.save
-    elsif params[:commit] == 'No'
+    elsif params[:commit] == 'No, Thanks'
       @match = Match.new
       @match.match_type = false
       @match.actor_id = session[:cat_id] 

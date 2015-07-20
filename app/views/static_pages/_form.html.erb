@@ -1,9 +1,7 @@
-<div class = "layout">
  <%= form_tag(create_matches_path) do %>
  <%= hidden_field_tag 'receiver_id', @cat.id %>
-
- <%= submit_tag("Yes, Please", id: "button") %>
- <%= submit_tag("No, Thanks", id: "button") %>
+ <%= submit_tag("Yes, Please", class: "submit_button", id: "yes") %>
+ <%= submit_tag("No, Thanks", class: "submit_button", id: "no") %>
 
  <%end %> 
-</div>
+

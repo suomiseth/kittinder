@@ -6,7 +6,26 @@
 
 body{
   font-family: "Varela Round", sans-serif;
-  background-image: url("catlove.jpg");
+  background-image: url("https://raw.githubusercontent.com/suomiseth/kittinder/mess_around_with_background/catlove_small.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+html::after {
+  content: "";
+  opacity: 0.15;
+  background-color: #129174;
+  background-repeat: repeat;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
 }
 .fixed-nav-bar {
   position: fixed;
@@ -56,7 +75,7 @@ body{
 .layout{
 margin-left: 15%;
 margin-right: 15%;
-margin-top: 10%;
+margin-top: 9%;
 }
 
 .show-box {
@@ -66,6 +85,10 @@ margin-top: 10%;
   padding-top: 20px;
   border-radius: 10%;
   text-align: center;
+}
+
+.white{
+  color: white;
 }
 
 .show-box img{
@@ -120,6 +143,16 @@ margin-top: 10%;
   max-height: 50%
 }
 
+.show-box img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  max-width: 25%;
+  height: auto;
+  max-height: 22%
+}
+
 
 .show-column {
   display: inline-block;
@@ -138,26 +171,34 @@ margin-top: 10%;
   margin-top: 10%;
 }
 
-#button{
+.submit_button{
   display: inline-block;
-  width: 48%;
-  padding: 5%;
+  width: 35%;
+  padding: 2.5%;
   font-family: "Varela Round", sans-serif;
   font-size: 18px;
   color :#000;
-  background-color: #fff;
+  background: transparent;
   border: 1px solid #000;
   text-align: center;
   outline: none;
   text-decoration: none;
 }
 
-#button:hover,
-#button:active {
+#yes:hover,
+#yes:active {
+  background-color: #129174;
+  color: #fff;
+  cursor: pointer;
+}
+
+#no:hover,
+#no:active {
   background-color: #FF6666;
   color: #fff;
   cursor: pointer;
 }
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
